@@ -1,9 +1,10 @@
 import pytest
 from faker import Faker
+from pydantic import EmailStr
 
 from services.auth.auth_service import AuthService
-from services.auth.models.login_request import LoginRequest
-from services.auth.models.register_request import RegisterRequest
+from services.auth.auth_models.login_request import LoginRequest
+from services.auth.auth_models.register_request import RegisterRequest
 from services.university.university_service import UniversityService
 from utils.api_utils import ApiUtils
 
