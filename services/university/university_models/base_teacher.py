@@ -2,7 +2,6 @@ from enum import StrEnum
 
 from pydantic import BaseModel, ConfigDict
 
-
 class SubjectEnum(StrEnum):
     MATH = "Mathematics"
     PHYS = "Physics"

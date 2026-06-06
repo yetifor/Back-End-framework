@@ -22,5 +22,5 @@ class AuthService(BaseService):
         return SuccessResponse(**response.json())
 
     def login_user(self, login_request: LoginRequest) -> LoginResponse:
-        response = self.authorization_helper.post_register(data=login_request.model_dump())
+        response = self.authorization_helper.post_login(data=login_request.model_dump())
         return LoginResponse(**response.json())
