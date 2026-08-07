@@ -31,3 +31,4 @@ class TestStudent:
         assert student.group_id == group_response.id, \
             (f"Wrong group id.Actual: '{student_response.group_id}',"
              f" but expected:'{group_response.id}'")
+
