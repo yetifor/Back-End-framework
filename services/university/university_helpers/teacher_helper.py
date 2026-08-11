@@ -1,12 +1,17 @@
 from services.general.helpers.base_helper import BaseHelper
 import requests
 
+from services.university.university_models.teacher_delete_response import TeacherDeleteResponse
+from services.university.university_models.teacher_response import TeacherResponse
+
+
 class TeacherHelper(BaseHelper):
     END_PREFIX = "/teachers"
 
-    ROOT_ENDPOINT = f"{END_PREFIX}/"
+    ROOT_ENDPOINT = f"/teachers/"
 
-    TEACHER_ID_ENDPOINT = f"{END_PREFIX}{{TeacherId}}"
+    TEACHER_ID_ENDPOINT = f"{END_PREFIX}{{teacher_id}}"
+
     def post_teacher(self, json: dict) -> requests.Response:
         response = self.api_utils.post(self.ROOT_ENDPOINT, json=json)
         return response

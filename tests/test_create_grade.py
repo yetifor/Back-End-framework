@@ -1,5 +1,6 @@
 from logger.logger import Logger
 from services.university.university_helpers.grade_helper import GradeHelper
+from services.university.university_models.base_grade import MIN_GRADE_VALUE, MAX_GRADE_VALUE
 from services.university.university_models.base_student import DegreeEnum
 from services.university.university_models.base_teacher import SubjectEnum
 from services.university.university_models.grade_request import GradeRequest
@@ -10,7 +11,9 @@ from services.university.university_service import UniversityService
 from faker import Faker
 
 import random
+
 faker = Faker()
+
 
 class TestGrade:
     def test_create_grade(self, university_api_utils_admin):
@@ -38,7 +41,7 @@ class TestGrade:
 
         grade = GradeRequest(teacher_id=teacher_response.id,
                              student_id=student_response.id,
-                             grade=random.randint(GradeHelper.MIN_GRADE_VALUE, GradeHelper.MAX_GRADE_VALUE + 1))
+                             grade=random.randint(MIN_GRADE_VALUE, MAX_GRADE_VALUE + 1))
 
         grade_response = university_service.create_grade(grade_request=grade)
 

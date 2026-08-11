@@ -3,18 +3,20 @@ import random
 from faker import Faker
 
 from logger.logger import Logger
+from services.university.university_models.base_grade import MAX_GRADE_VALUE, MIN_GRADE_VALUE
 from services.university.university_helpers.grade_helper import GradeHelper
 from services.university.university_models import student_request, grade_response
 from services.university.university_models.base_student import DegreeEnum
 from services.university.university_models.base_teacher import SubjectEnum
 from services.university.university_models.grade_request import GradeRequest
-from services.university.university_models.grade_status_request import GradeStatisticRequest
+
 from services.university.university_models.grade_status_response import GradeStatisticResponse
 from services.university.university_models.group_request import GroupRequest
 from services.university.university_models.group_response import GroupResponse
 from services.university.university_models.student_request import StudentRequest
 from services.university.university_models.teacher_request import TeacherRequest
 from services.university.university_service import UniversityService
+from utils.soft_assert import SoftAssert
 
 faker = Faker()
 
@@ -47,26 +49,87 @@ class TestStatsGrade:
         Logger.info("### Step 4. Create Grades ###")
         grade1 = GradeRequest(teacher_id=teacher_response.id,
                               student_id=student_response.id,
-                              grade=random.randint(GradeHelper.MIN_GRADE_VALUE, GradeHelper.MAX_GRADE_VALUE + 1))
-
-        grade_response1 = university_service.create_grade(grade_request=grade1)
+                              grade=random.randint(MIN_GRADE_VALUE, MAX_GRADE_VALUE))
+        grade1_response = university_service.create_grade(grade_request=grade1)
 
         grade2 = GradeRequest(teacher_id=teacher_response.id,
                               student_id=student_response.id,
-                              grade=random.randint(GradeHelper.MIN_GRADE_VALUE, GradeHelper.MAX_GRADE_VALUE + 1))
+                              grade=random.randint(MIN_GRADE_VALUE, MAX_GRADE_VALUE))
+        grade2_response = university_service.create_grade(grade_request=grade2)
 
-        grade_response2 = university_service.create_grade(grade_request=grade2)
-        grades = [grade_response1.grade, grade_response2.grade]
+        grade_stats = university_service.get_stats_grade({'student_id': student_response.id,
+                                                          'teacher_id': teacher_response.id,
+                                                          'group_id': group_response.id})
+
+        grades = [grade1_response.grade, grade2_response.grade]
 
         Logger.info("### Step 5. Create Statistics ###")
 
-        grade_stats_request = GradeStatisticRequest(student_id=student_response.id,
-                                                    teacher_id=teacher_response.id,
-                                                    group_id=group_response.id)
-        grade_stats_response = university_service.get_stats_grade(grade_request=grade1)
-
+        expected_count = len(grades)
         expected_avg = sum(grades) / len(grades)
+        expected_min = min(grades)
+        expected_max = max(grades)
 
-        assert expected_avg == grade_stats_response.avg, \
-            (f"Wrong avg actual: {grade_stats_response.avg}, "
-             f"Assert avg: {expected_avg}")
+        with SoftAssert() as sa:
+            sa.soft_assert(grade_stats.count, expected_count, "Test count")
+            sa.soft_assert(grade_stats.avg, expected_avg, "Test avg")
+            sa.soft_assert(grade_stats.min, expected_min, "Test min")
+            sa.soft_assert(grade_stats.max, expected_max, "Test max")
+
+    def test_stats_empty_teacher(self, university_api_utils_admin):
+        university_service = UniversityService(api_utils=university_api_utils_admin)
+        Logger.info("### Step 1. Create Teacher ###")
+        teacher = TeacherRequest(first_name=faker.first_name(),
+                                 last_name=faker.last_name(),
+                                 subject=random.choice([option for option in
+                                                        SubjectEnum]))
+        teacher_response = university_service.create_teacher(teacher_request=teacher)
+
+        stats = university_service.get_stats_grade({'student_id': None,
+                                                    'teacher_id': teacher_response.id,
+                                                    'group_id': None})
+
+        expected_count = stats.count
+        expected_avg = None
+        expected_min = None
+        expected_max = None
+
+        with SoftAssert() as sa:
+            sa.soft_assert(stats.count, expected_count, "Test count")
+            sa.soft_assert(stats.avg, expected_avg, "Test avg")
+            sa.soft_assert(stats.min, expected_min, "Test min")
+            sa.soft_assert(stats.avg, expected_max, "Test max")
+
+    def test_stats_invalid_teacher(self, university_api_utils_admin):
+        university_service = UniversityService(api_utils=university_api_utils_admin)
+        stats = university_service.get_stats_grade({'student_id': None,
+                                                    'teacher_id': random.randint(5000000, 100000000),
+                                                    'group_id': None})
+
+        expected_count = stats.count
+        expected_avg = None
+        expected_min = None
+        expected_max = None
+
+        with SoftAssert() as sa:
+            sa.soft_assert(stats.count, expected_count, "Test count")
+            sa.soft_assert(stats.avg, expected_avg, "Test avg")
+            sa.soft_assert(stats.min, expected_min, "Test min")
+            sa.soft_assert(stats.avg, expected_max, "Test max")
+
+    def test_stats_invalid_student(self, university_api_utils_admin):
+        university_service = UniversityService(api_utils=university_api_utils_admin)
+        stats = university_service.get_stats_grade({'student_id': random.randint(5111111, 13333333),
+                                                    'teacher_id': None,
+                                                    'group_id': None})
+
+        expected_count = stats.count
+        expected_avg = None
+        expected_min = None
+        expected_max = None
+
+        with SoftAssert() as sa:
+            sa.soft_assert(stats.count, expected_count, "Test count")
+            sa.soft_assert(stats.avg, expected_avg, "Test avg")
+            sa.soft_assert(stats.min, expected_min, "Test min")
+            sa.soft_assert(stats.avg, expected_max, "Test max")

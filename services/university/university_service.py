@@ -5,12 +5,13 @@ from services.university.university_helpers.student_helper import StudentHelper
 from services.university.university_helpers.teacher_helper import TeacherHelper
 from services.university.university_models.grade_request import GradeRequest
 from services.university.university_models.grade_response import GradeResponse
-from services.university.university_models.grade_status_request import GradeStatisticRequest
+
 from services.university.university_models.grade_status_response import GradeStatisticResponse
 from services.university.university_models.group_request import GroupRequest
 from services.university.university_models.group_response import GroupResponse
 from services.university.university_models.student_request import StudentRequest
 from services.university.university_models.student_response import StudentResponse
+from services.university.university_models.teacher_delete_response import TeacherDeleteResponse
 from services.university.university_models.teacher_request import TeacherRequest
 from services.university.university_models.teacher_response import TeacherResponse
 from utils.api_utils import ApiUtils
@@ -43,6 +44,10 @@ class UniversityService(BaseService):
         response = self.grade_helper.post_grade(grade_request.model_dump())
         return GradeResponse(**response.json())
 
-    def get_stats_grade(self, grade_request: GradeStatisticRequest) -> GradeStatisticResponse:
-        response = self.grade_helper.get_grades_stats(grade_request.model_dump())
+    def get_stats_grade(self, grade_request ) -> GradeStatisticResponse:
+        response = self.grade_helper.get_grades_stats(grade_request)
         return GradeStatisticResponse(**response.json())
+
+    def delete_teacher(self, teacher_request ) -> TeacherDeleteResponse:
+        response = self.teacher_helper.delete_teacher(teacher_request)
+        return TeacherDeleteResponse(**response.json())

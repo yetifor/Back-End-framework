@@ -7,9 +7,6 @@ from services.university.university_models.grade_status_response import GradeSta
 
 
 class GradeHelper(BaseHelper):
-
-    MIN_GRADE_VALUE = 0
-    MAX_GRADE_VALUE = 5
     END_PREFIX = "/grades"
 
     ROOT_ENDPOINT = f"{END_PREFIX}/"
