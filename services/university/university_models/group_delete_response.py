@@ -1,5 +1,5 @@
 from pydantic import BaseModel
 
 
-class TeacherDeleteResponse(BaseModel):
+class GroupDeleteModel(BaseModel):
     detail: str

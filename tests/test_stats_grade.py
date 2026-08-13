@@ -9,7 +9,8 @@ from services.university.university_models import student_request, grade_respons
 from services.university.university_models.base_student import DegreeEnum
 from services.university.university_models.base_teacher import SubjectEnum
 from services.university.university_models.grade_request import GradeRequest
-
+from services.university.university_models.stats_expected_model import ExpectedModel
+from services.university.university_models.stats_actual_model import ActualModel
 from services.university.university_models.grade_status_response import GradeStatisticResponse
 from services.university.university_models.group_request import GroupRequest
 from services.university.university_models.group_response import GroupResponse
@@ -46,20 +47,22 @@ class TestStatsGrade:
                                                         SubjectEnum]))
         teacher_response = university_service.create_teacher(teacher_request=teacher)
 
-        Logger.info("### Step 4. Create Grades ###")
+        Logger.info("### Step 4. Create Grades###")
+        grade = 2
+
         grade1 = GradeRequest(teacher_id=teacher_response.id,
                               student_id=student_response.id,
-                              grade=random.randint(MIN_GRADE_VALUE, MAX_GRADE_VALUE))
+                              grade=2)
         grade1_response = university_service.create_grade(grade_request=grade1)
 
         grade2 = GradeRequest(teacher_id=teacher_response.id,
                               student_id=student_response.id,
-                              grade=random.randint(MIN_GRADE_VALUE, MAX_GRADE_VALUE))
+                              grade=3)
         grade2_response = university_service.create_grade(grade_request=grade2)
 
-        grade_stats = university_service.get_stats_grade({'student_id': student_response.id,
-                                                          'teacher_id': teacher_response.id,
-                                                          'group_id': group_response.id})
+        grade_stats = university_service.get_stats_grade(student_id=student_response.id,
+                                                         teacher_id=teacher_response.id,
+                                                         group_id=group_response.id)
 
         grades = [grade1_response.grade, grade2_response.grade]
 
@@ -85,9 +88,7 @@ class TestStatsGrade:
                                                         SubjectEnum]))
         teacher_response = university_service.create_teacher(teacher_request=teacher)
 
-        stats = university_service.get_stats_grade({'student_id': None,
-                                                    'teacher_id': teacher_response.id,
-                                                    'group_id': None})
+        stats = university_service.get_stats_grade(teacher_id=teacher_response.id)
 
         expected_count = stats.count
         expected_avg = None
@@ -96,15 +97,14 @@ class TestStatsGrade:
 
         with SoftAssert() as sa:
             sa.soft_assert(stats.count, expected_count, "Test count")
-            sa.soft_assert(stats.avg, expected_avg, "Test avg")
-            sa.soft_assert(stats.min, expected_min, "Test min")
-            sa.soft_assert(stats.avg, expected_max, "Test max")
+        sa.soft_assert(stats.avg, expected_avg, "Test avg")
+        sa.soft_assert(stats.min, expected_min, "Test min")
+        sa.soft_assert(stats.avg, expected_max, "Test max")
 
     def test_stats_invalid_teacher(self, university_api_utils_admin):
         university_service = UniversityService(api_utils=university_api_utils_admin)
-        stats = university_service.get_stats_grade({'student_id': None,
-                                                    'teacher_id': random.randint(5000000, 100000000),
-                                                    'group_id': None})
+        stats = university_service.get_stats_grade(
+            teacher_id=random.randint(5000000, 100000000))
 
         expected_count = stats.count
         expected_avg = None
@@ -119,9 +119,7 @@ class TestStatsGrade:
 
     def test_stats_invalid_student(self, university_api_utils_admin):
         university_service = UniversityService(api_utils=university_api_utils_admin)
-        stats = university_service.get_stats_grade({'student_id': random.randint(5111111, 13333333),
-                                                    'teacher_id': None,
-                                                    'group_id': None})
+        stats = university_service.get_stats_grade(student_id=random.randint(122222, 99999999), )
 
         expected_count = stats.count
         expected_avg = None
@@ -133,3 +131,60 @@ class TestStatsGrade:
             sa.soft_assert(stats.avg, expected_avg, "Test avg")
             sa.soft_assert(stats.min, expected_min, "Test min")
             sa.soft_assert(stats.avg, expected_max, "Test max")
+
+    def test_stats_techer(self, university_api_utils_admin):
+        university_service = UniversityService(api_utils=university_api_utils_admin)
+        Logger.info("### Step 1. Create group ###")
+        group_request = GroupRequest(name=faker.word())
+        group_response = university_service.create_group(group_request=group_request)
+
+        Logger.info("### Step 2. Create Student ###")
+        student = StudentRequest(first_name=faker.first_name(),
+                                 last_name=faker.last_name(),
+                                 email=faker.email(),
+                                 degree=random.choice([option for option in
+                                                       DegreeEnum]),
+                                 phone=faker.numerify("+7##########"),
+                                 group_id=group_response.id)
+        student_response = university_service.create_student(student_request=student)
+
+        Logger.info("### Step 3. Create Teacher ###")
+        teacher = TeacherRequest(first_name=faker.first_name(),
+                                 last_name=faker.last_name(),
+                                 subject=random.choice([option for option in
+                                                        SubjectEnum]))
+        teacher_response = university_service.create_teacher(teacher_request=teacher)
+
+        Logger.info("### Step 4. Create Grades###")
+        grade = 2
+
+        grade1 = GradeRequest(teacher_id=teacher_response.id,
+                              student_id=student_response.id,
+                              grade=2)
+        grade1_response = university_service.create_grade(grade_request=grade1)
+
+        grade2 = GradeRequest(teacher_id=teacher_response.id,
+                              student_id=student_response.id,
+                              grade=3)
+        grade2_response = university_service.create_grade(grade_request=grade2)
+
+        grade_stats = university_service.get_stats_grade(teacher_id=teacher_response.id, )
+
+        grades1 = [grade1_response.grade, grade2_response.grade]
+
+        Logger.info("### Step 5. Create Statistics ###")
+
+        stats = university_service.get_stats_grade(teacher_id=teacher_response.id, )
+
+        expected_model = ExpectedModel(expected_count=len(grades1),
+                                       expected_avg=sum(grades1) / len(grades1),
+                                       expected_min=min(grades1),
+                                       expected_max=max(grades1))
+
+        actual_model = ActualModel(expected_count=stats.count,
+                                   expected_avg=stats.avg,
+                                   expected_min=stats.min,
+                                   expected_max=stats.max)
+
+        assert actual_model == expected_model, \
+            (f"The expected model did not match the obtained one.")

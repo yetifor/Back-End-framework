@@ -5,7 +5,7 @@ from services.university.university_helpers.student_helper import StudentHelper
 from services.university.university_helpers.teacher_helper import TeacherHelper
 from services.university.university_models.grade_request import GradeRequest
 from services.university.university_models.grade_response import GradeResponse
-
+from services.university.university_models.group_delete_response import GroupDeleteModel
 from services.university.university_models.grade_status_response import GradeStatisticResponse
 from services.university.university_models.group_request import GroupRequest
 from services.university.university_models.group_response import GroupResponse
@@ -44,10 +44,14 @@ class UniversityService(BaseService):
         response = self.grade_helper.post_grade(grade_request.model_dump())
         return GradeResponse(**response.json())
 
-    def get_stats_grade(self, grade_request ) -> GradeStatisticResponse:
-        response = self.grade_helper.get_grades_stats(grade_request)
+    def get_stats_grade(self, student_id=None, teacher_id=None, group_id=None) -> GradeStatisticResponse:
+        response = self.grade_helper.get_grades_stats(student_id, teacher_id, group_id)
         return GradeStatisticResponse(**response.json())
 
-    def delete_teacher(self, teacher_request ) -> TeacherDeleteResponse:
+    def delete_teacher(self, teacher_request) -> TeacherDeleteResponse:
         response = self.teacher_helper.delete_teacher(teacher_request)
         return TeacherDeleteResponse(**response.json())
+
+    def delete_group(self, group_request) -> GroupDeleteModel:
+        response = self.group_helper.delete_group(group_request)
+        return GroupDeleteModel(**response.json())

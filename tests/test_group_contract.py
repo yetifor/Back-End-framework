@@ -6,9 +6,13 @@ import pytest
 from faker import Faker
 
 from logger.logger import Logger
+from services.university.university_models.group_delete_response import GroupDeleteModel
 from services.university.university_helpers.group_helper import GroupHelper
 from services.university.university_helpers.student_helper import StudentHelper
 from services.university.university_models.base_student import DegreeEnum
+from services.university.university_models.group_request import GroupRequest
+from services.university.university_models.student_request import StudentRequest
+from services.university.university_service import UniversityService
 
 faker = Faker()
 
@@ -32,17 +36,16 @@ class TestGroupContract:
              f"But expected status code: {requests.status_codes.codes.ok}")
 
     def test_group_delete(self, university_api_utils_admin):
-        group_helper = GroupHelper(api_utils=university_api_utils_admin)
-        Logger.info(f"### Step 1. Create group")
-        response = group_helper.post_group({"name": faker.name()})
-        Logger.info(f"### Step 2. Get group ID")
-        group_id = response.json()["id"]
-        Logger.info(f"### Step 3. Delete group")
-        group_delete = group_helper.delete_group(group_id)
+        university_service = UniversityService(university_api_utils_admin)
+        Logger.info(f"### Step 1. Create Group")
+        group_request = GroupRequest(name=faker.name())
+        group_response = university_service.create_group(group_request=group_request)
 
-        assert group_delete.status_code == 200, \
-            (f"Wrong status code: {group_delete.status_code}"
-             f"But expected status code: {requests.status_codes.codes.ok}")
+        Logger.info(f"### Step 2. Delete Group")
+        id = group_response.id
+        delete_request = university_service.delete_group(id)
+        assert delete_request.detail == "Group deleted", \
+            (f"Wrong detail: {delete_request.detail}")
 
     def test_group_register_empty_field(self, university_api_utils_admin):
         group_helper = GroupHelper(api_utils=university_api_utils_admin)
@@ -53,15 +56,7 @@ class TestGroupContract:
              f"But expected status code: 422")
 
     def test_group_add_invalid_student_id(self, university_api_utils_admin):
-        group_helper = GroupHelper(api_utils=university_api_utils_admin)
-
-        Logger.info(f"### Step 1. Create group")
-        response = group_helper.post_group({"name": faker.name()})
-
-        Logger.info(f"### Step 2. Get group ID")
-        group_id = response.json()["id"]
-
-        Logger.info(f"### Step 3. Create Student")
+        Logger.info(f"### Step 1. Create Student")
         student_helper = StudentHelper(university_api_utils_admin)
         student = student_helper.post_student({"first_name": faker.first_name(),
                                                "last_name": faker.last_name(),
