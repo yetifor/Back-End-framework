@@ -18,10 +18,20 @@ class GradeHelper(BaseHelper):
         return response
 
     def get_grades_stats(self, student_id=None, teacher_id=None, group_id=None) -> requests.Response:
-        params = {'student_id': student_id, 'teacher_id': teacher_id, 'group_id': group_id}
+        params = {}
+        if student_id is not None:
+            params["student_id"] = student_id
+        if teacher_id is not None:
+            params["teacher_id"] = teacher_id
+        if group_id is not None:
+            params["group_id"] = group_id
+
         response = self.api_utils.get(self.STATS_ENDPOINT, params=params)
         return response
 
-    def comparison_expected_and_actual_models(self, expected_model, actual_model) -> requests.Response:
-        result = (expected_model == actual_model)
-        return result
+    def clean_statistics(self, count: int) -> None:
+        for i in range(count + 1):
+            grade_id = i
+            response = self.api_utils.delete(f"{self.ROOT_ENDPOINT}{grade_id}")
+
+        return None

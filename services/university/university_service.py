@@ -1,3 +1,5 @@
+import requests
+
 from services.general.base_service import BaseService
 from services.university.university_helpers.grade_helper import GradeHelper
 from services.university.university_helpers.group_helper import GroupHelper
@@ -55,3 +57,7 @@ class UniversityService(BaseService):
     def delete_group(self, group_request) -> GroupDeleteModel:
         response = self.group_helper.delete_group(group_request)
         return GroupDeleteModel(**response.json())
+
+    def clean_statistics(self, count):
+        clean = self.grade_helper.clean_statistics(count=count)
+        return None

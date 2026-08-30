@@ -10,12 +10,12 @@ class TeacherHelper(BaseHelper):
 
     ROOT_ENDPOINT = f"/teachers/"
 
-    TEACHER_ID_ENDPOINT = f"{END_PREFIX}{{teacher_id}}"
+
 
     def post_teacher(self, json: dict) -> requests.Response:
         response = self.api_utils.post(self.ROOT_ENDPOINT, json=json)
         return response
 
     def delete_teacher(self, teacher_id: int) -> requests.Response:
-        response = self.api_utils.delete(f"{self.ROOT_ENDPOINT}{teacher_id}")
+        response = self.api_utils.delete(f"{self.END_PREFIX}/{teacher_id}")
         return response
