@@ -90,17 +90,16 @@ class TestStatsGrade:
 
         stats = university_service.get_stats_grade(teacher_id=teacher_response.id)
 
+        expected_model = GradeStatisticResponse(count=0,
+                                                avg=None,
+                                                min=None,
+                                                max=None)
 
-        expected_model = ExpectedModel(expected_count=0,
-                                       expected_avg=None,
-                                       expected_min=None,
-                                       expected_max=None)
-
-        actual_model = ExpectedModel(expected_count=stats.count,
-                                   expected_avg=stats.avg,
-                                   expected_min=stats.min,
-                                   expected_max=stats.max)
-        assert expected_model == actual_model, \
+        actual_model = GradeStatisticResponse(count=stats.count,
+                                              avg=stats.avg,
+                                              min=stats.min,
+                                              max=stats.max)
+        assert expected_model == stats, \
             (f" {expected_model} != {actual_model}",)
 
     def test_stats_invalid_teacher(self, university_api_utils_admin):
@@ -220,7 +219,7 @@ class TestStatsGrade:
             sa.soft_assert(actual_model.expected_min, expected_model.expected_min, "Test min")
             sa.soft_assert(actual_model.expected_max, expected_model.expected_max, "Test max")
 
-    def test_stats_not_found(self, university_api_utils_admin):
+    def test_stats_empty(self, university_api_utils_admin):
         university_service = UniversityService(api_utils=university_api_utils_admin)
         stats = university_service.get_stats_grade()
         cleaner = university_service.clean_statistics(300)
