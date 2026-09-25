@@ -4,7 +4,7 @@ from services.general.helpers.base_helper import BaseHelper
 from services.university.university_models.grade_request import GradeRequest
 from services.university.university_models.grade_response import GradeResponse
 from services.university.university_models.grade_status_response import GradeStatisticResponse
-from services.university.university_models.stats_expected_model import ExpectedModel
+
 
 
 class GradeHelper(BaseHelper):
@@ -33,5 +33,3 @@ class GradeHelper(BaseHelper):
         for i in range(count + 1):
             grade_id = i
             response = self.api_utils.delete(f"{self.ROOT_ENDPOINT}{grade_id}")
-
-        return None

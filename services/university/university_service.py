@@ -60,4 +60,3 @@ class UniversityService(BaseService):
 
     def clean_statistics(self, count):
         clean = self.grade_helper.clean_statistics(count=count)
-        return None

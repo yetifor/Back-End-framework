@@ -9,8 +9,7 @@ from services.university.university_models import student_request, grade_respons
 from services.university.university_models.base_student import DegreeEnum
 from services.university.university_models.base_teacher import SubjectEnum
 from services.university.university_models.grade_request import GradeRequest
-from services.university.university_models.stats_expected_model import ExpectedModel
-from services.university.university_models.stats_actual_model import ActualModel
+
 from services.university.university_models.grade_status_response import GradeStatisticResponse
 from services.university.university_models.group_request import GroupRequest
 from services.university.university_models.group_response import GroupResponse
@@ -133,7 +132,7 @@ class TestStatsGrade:
             sa.soft_assert(stats.min, expected_min, "Test min")
             sa.soft_assert(stats.avg, expected_max, "Test max")
 
-    def test_stats_techer(self, university_api_utils_admin):
+    def test_stats_teacher(self, university_api_utils_admin):
         university_service = UniversityService(api_utils=university_api_utils_admin)
         Logger.info("### Step 1. Create group ###")
         group_request = GroupRequest(name=faker.word())
@@ -203,21 +202,21 @@ class TestStatsGrade:
 
         stats = university_service.get_stats_grade(teacher_id=teacher_response.id, )
 
-        expected_model = ExpectedModel(expected_count=len(grades),
-                                       expected_avg=sum(grades) / len(grades),
-                                       expected_min=min(grades),
-                                       expected_max=max(grades))
+        expected_model = GradeStatisticResponse(count=len(grades),
+                                                min=min(grades),
+                                                max=max(grades),
+                                                avg=sum(grades) / len(grades))
 
-        actual_model = ActualModel(expected_count=stats.count,
-                                   expected_avg=stats.avg,
-                                   expected_min=stats.min,
-                                   expected_max=stats.max)
+        actual_model = GradeStatisticResponse(count=len(grades),
+                                              min=min(grades),
+                                              max=max(grades),
+                                              avg=sum(grades) / len(grades))
 
         with SoftAssert() as sa:
-            sa.soft_assert(actual_model.expected_count, expected_model.expected_count, "Test count")
-            sa.soft_assert(actual_model.expected_avg, expected_model.expected_avg, "Test avg")
-            sa.soft_assert(actual_model.expected_min, expected_model.expected_min, "Test min")
-            sa.soft_assert(actual_model.expected_max, expected_model.expected_max, "Test max")
+            sa.soft_assert(actual_model.count, expected_model.count, "Test count")
+            sa.soft_assert(actual_model.avg, expected_model.avg, "Test avg")
+            sa.soft_assert(actual_model.min, expected_model.min, "Test min")
+            sa.soft_assert(actual_model.max, expected_model.max, "Test max")
 
     def test_stats_empty(self, university_api_utils_admin):
         university_service = UniversityService(api_utils=university_api_utils_admin)

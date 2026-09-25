@@ -10,8 +10,6 @@ class TeacherHelper(BaseHelper):
 
     ROOT_ENDPOINT = f"/teachers/"
 
-
-
     def post_teacher(self, json: dict) -> requests.Response:
         response = self.api_utils.post(self.ROOT_ENDPOINT, json=json)
         return response
