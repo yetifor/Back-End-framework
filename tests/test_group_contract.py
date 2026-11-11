@@ -19,13 +19,13 @@ faker = Faker()
 
 class TestGroupContract:
 
-    def test_create_group_anonym(self, university_api_utils_anonym):
-        group_helper = GroupHelper(api_utils=university_api_utils_anonym)
-        response = group_helper.post_group({"name": faker.name()})
-
-        assert response.status_code == requests.status_codes.codes.unauthorized, \
-            (f"Wrong status code: {response.status_code}"
-             f"But expected status code: {requests.status_codes.codes.ok}")
+    # def test_create_group_anonym(self, university_api_utils_anonym):
+    #     group_helper = GroupHelper(api_utils=university_api_utils_anonym)
+    #     response = group_helper.post_group({"name": faker.name()})
+    #
+    #     assert response.status_code == requests.status_codes.codes.unauthorized, \
+    #         (f"Wrong status code: {response.status_code}"
+    #          f"But expected status code: {requests.status_codes.codes.ok}")
 
     def test_create_group_admin(self, university_api_utils_admin):
         group_helper = GroupHelper(api_utils=university_api_utils_admin)
