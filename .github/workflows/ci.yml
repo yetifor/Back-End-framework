@@ -1,0 +1,43 @@
+name: Tests CI
+
+on:
+  push:
+    branches: [ "main", "feature/test" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set up Python and Ruff
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+      - run: |
+         pip install ruff
+         ruff check
+
+  tests:
+    runs-on: ubuntu-latest
+    needs: [lint]
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Create .env
+        run: |
+          cat << 'EOF' > .env
+          POSTGRES_USER=${{ secrets.POSTGRES_USER }}
+          POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }}
+          POSTGRES_DB_AUTH=${{ secrets.POSTGRES_DB_AUTH }}
+          POSTGRES_DB_UNIVERSITY=${{ secrets.POSTGRES_DB_UNIVERSITY }}
+          AUTH_SERVICE_INTERNAL_URL=${{ vars.AUTH_SERVICE_INTERNAL_URL }}
+          AUTH_SERVICE_API_URL=${{ vars.AUTH_SERVICE_API_URL }}
+          UNIVERSITY_SERVICE_INTERNAL_URL=${{ vars.UNIVERSITY_SERVICE_INTERNAL_URL }}
+          UNIVERSITY_SERVICE_API_URL=${{ vars.UNIVERSITY_SERVICE_API_URL }}
+          EOF
+
+      - name: Biuld Docker Image 2
+        run: docker build -t myapp .
