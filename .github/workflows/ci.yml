@@ -40,3 +40,4 @@ jobs:
           EOF
 
       - name: Biuld Docker Image 2
+        uses: docker build -t myapp .
