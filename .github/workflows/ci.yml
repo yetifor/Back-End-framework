@@ -2,7 +2,7 @@ name: Tests CI
 
 on:
   push:
-    branches: [ "main, future" ]
+    branches: [ "main, future/tests" ]
   pull_request:
     branches: [ "main" ]
 
@@ -39,4 +39,4 @@ jobs:
           UNIVERSITY_SERVICE_API_URL=${{ vars.UNIVERSITY_SERVICE_API_URL }}
           EOF
 
-      - name: Biuld Docker Image
+      - name: Biuld Docker Image 1
