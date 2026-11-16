@@ -28,4 +28,4 @@ class GradeHelper(BaseHelper):
     def clean_statistics(self, count: int) -> None:
         for i in range(count + 1):
             grade_id = i
-            response = self.api_utils.delete(f"{self.ROOT_ENDPOINT}{grade_id}")
+            self.api_utils.delete(f"{self.ROOT_ENDPOINT}{grade_id}")

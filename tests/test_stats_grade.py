@@ -44,7 +44,6 @@ class TestStatsGrade:
         teacher_response = university_service.create_teacher(teacher_request=teacher)
 
         Logger.info("### Step 4. Create Grades###")
-        grade = 2
 
         grade1 = GradeRequest(teacher_id=teacher_response.id,
                               student_id=student_response.id,
@@ -155,7 +154,7 @@ class TestStatsGrade:
         trash_grade1 = GradeRequest(teacher_id=trash_teacher_response.id,
                                     student_id=trash_student_response.id,
                                     grade=4)
-        trash_grade1_response = university_service.create_grade(grade_request=trash_grade1)
+        university_service.create_grade(grade_request=trash_grade1)
 
         trash_grade2 = GradeRequest(teacher_id=trash_teacher_response.id,
                                     student_id=trash_student_response.id,
@@ -191,13 +190,13 @@ class TestStatsGrade:
                               grade=3)
         grade2_response = university_service.create_grade(grade_request=grade2)
 
-        grade_stats = university_service.get_stats_grade(teacher_id=teacher_response.id, )
+        university_service.get_stats_grade(teacher_id=teacher_response.id, )
 
         grades = [grade1_response.grade, grade2_response.grade]
 
         Logger.info("### Step 5. Create Statistics ###")
 
-        stats = university_service.get_stats_grade(teacher_id=teacher_response.id, )
+        university_service.get_stats_grade(teacher_id=teacher_response.id, )
 
         expected_model = GradeStatisticResponse(count=len(grades),
                                                 min=min(grades),
@@ -218,7 +217,7 @@ class TestStatsGrade:
     def test_stats_empty(self, university_api_utils_admin):
         university_service = UniversityService(api_utils=university_api_utils_admin)
         stats = university_service.get_stats_grade()
-        cleaner = university_service.clean_statistics(300)
+        university_service.clean_statistics(300)
 
         stats = university_service.get_stats_grade()
 

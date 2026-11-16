@@ -1,6 +1,5 @@
 import random
 
-import faker
 import requests
 from faker import Faker
 

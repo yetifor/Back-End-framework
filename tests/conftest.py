@@ -114,7 +114,7 @@ def delete_database():
         conn.commit()
         print("Таблица успешно очищена!")
 
-    except Exception as error:
+    except Exception as error: # noqa: BLE001
         print(f"Ошибка: {error}")
     finally:
         if conn:

@@ -62,4 +62,4 @@ class UniversityService(BaseService):
         return GroupDeleteModel(**response.json())
 
     def clean_statistics(self, count):
-        clean = self.grade_helper.clean_statistics(count=count)
+        self.grade_helper.clean_statistics(count=count)
