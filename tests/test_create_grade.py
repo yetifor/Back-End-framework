@@ -44,7 +44,7 @@ class TestGrade:
 
         grade = GradeRequest(teacher_id=teacher_response.id,
                              student_id=student_response.id,
-                             grade=random.randint(MIN_GRADE_VALUE, MAX_GRADE_VALUE + 1))
+                             grade=random.randint(MIN_GRADE_VALUE, MAX_GRADE_VALUE))
 
         grade_response = university_service.create_grade(grade_request=grade)
 
