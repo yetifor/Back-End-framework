@@ -81,11 +81,22 @@ jobs:
           name: allure-results
           path: allure-results
 
+      - name: Get Allure history
+        uses: actions/checkout@v4
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+
       - name: Generate Allure report
-        run: |
-          wget -q https://github.com
-          tar -xzf allure-2.32.2.tgz
-          ./allure-2.32.2/bin/allure generate allure_results -o allure-report --clean
+        uses: simple-elf/allure-report-action@v1.9
+        if: always()
+        with:
+          allure_results: allure_results
+          allure_history: allure_history
+          gh_pages: gh_pages
+          allure_report: allure-report
 
       - name: Deploy results to Github Pages
         if: always()
