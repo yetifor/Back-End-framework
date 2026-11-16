@@ -77,8 +77,8 @@ jobs:
       - name: Download Allure results
         uses: actions/download-artifact@v4
         with:
-          name: allure-reports
-          path: allure-reports
+          name: allure-results
+          path: allure-results
 
       - name: Deploy results to Github Pages
         if: always()
