@@ -2,7 +2,7 @@ name: Tests CI
 
 on:
   push:
-    branches: [ "main", "feature/testы" ]
+    branches: [ "main", "feature/tests" ]
   pull_request:
     branches: [ "main" ]
 
