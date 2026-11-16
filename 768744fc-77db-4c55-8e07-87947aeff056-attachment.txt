@@ -1,0 +1,28 @@
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 144' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=cindymitchell&password=%23eh9Bmj%5EsSGMW12LU_6C35c_y7CWYX&password_repeat=%23eh9Bmj%5EsSGMW12LU_6C35c_y7CWYX&email=opayne%40example.org' http://localhost:8000/auth/register/
+INFO     Logger:logger.py:29 Response status code='201', elapsed_time='0:00:00.193529'
+{
+  "detail": "User registered"
+}
+
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 66' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=cindymitchell&password=%23eh9Bmj%5EsSGMW12LU_6C35c_y7CWYX' http://localhost:8000/auth/login/
+INFO     Logger:logger.py:29 Response status code='200', elapsed_time='0:00:00.216488'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJ1c2VybmFtZSI6ImNpbmR5bWl0Y2hlbGwiLCJleHAiOjE3OTQ4NjQ1NDEsImlhdCI6MTc5NDg1NzM0MX0.dSauljGWbDTtwImF4q-y1m8YBXbIru-PYLRzl-e5R84q-x8SgABc_dKtSCbbILIN1ZD0S1pXdhW12Z51RuRePkyWwyK4L_NoMGuTf1vyU5i24OAWEm1cg-7fiXkNe6mqZ7xHfP5dIaTuuExWUD_gTREeMTpPKZDhaGzdti2JygGeHHxSMf36fHfxZsz9Y2iZ0H_rkul3oDt2FePuJmQcPJCX7-05rGKpZ1Dhus882QvvNwIDnXOrQi0_cctl0lo2KtgreAnlaVbEl5s9hDsiW8U2PSO_vgYGTwbS4QFLYDlKy6sm7XB1DqGUu76goiVVhbKijwW0JsKkJtnCUW803w",
+  "token_type": "Bearer"
+}
+INFO     Logger:logger.py:29 ### Step 1. Create Teacher ###
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJ1c2VybmFtZSI6ImNpbmR5bWl0Y2hlbGwiLCJleHAiOjE3OTQ4NjQ1NDEsImlhdCI6MTc5NDg1NzM0MX0.dSauljGWbDTtwImF4q-y1m8YBXbIru-PYLRzl-e5R84q-x8SgABc_dKtSCbbILIN1ZD0S1pXdhW12Z51RuRePkyWwyK4L_NoMGuTf1vyU5i24OAWEm1cg-7fiXkNe6mqZ7xHfP5dIaTuuExWUD_gTREeMTpPKZDhaGzdti2JygGeHHxSMf36fHfxZsz9Y2iZ0H_rkul3oDt2FePuJmQcPJCX7-05rGKpZ1Dhus882QvvNwIDnXOrQi0_cctl0lo2KtgreAnlaVbEl5s9hDsiW8U2PSO_vgYGTwbS4QFLYDlKy6sm7XB1DqGUu76goiVVhbKijwW0JsKkJtnCUW803w' -H 'Content-Length: 69' -H 'Content-Type: application/json' -d '{"first_name": "Linda", "last_name": "Jones", "subject": "Geography"}' http://localhost:8001/teachers/
+INFO     Logger:logger.py:29 Response status code='201', elapsed_time='0:00:00.007708'
+{
+  "first_name": "Linda",
+  "last_name": "Jones",
+  "subject": "Geography",
+  "id": 8
+}
+
+INFO     Logger:logger.py:29 ### Step 2. Delete teacher
+INFO     Logger:logger.py:29 Request:curl -X DELETE -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJ1c2VybmFtZSI6ImNpbmR5bWl0Y2hlbGwiLCJleHAiOjE3OTQ4NjQ1NDEsImlhdCI6MTc5NDg1NzM0MX0.dSauljGWbDTtwImF4q-y1m8YBXbIru-PYLRzl-e5R84q-x8SgABc_dKtSCbbILIN1ZD0S1pXdhW12Z51RuRePkyWwyK4L_NoMGuTf1vyU5i24OAWEm1cg-7fiXkNe6mqZ7xHfP5dIaTuuExWUD_gTREeMTpPKZDhaGzdti2JygGeHHxSMf36fHfxZsz9Y2iZ0H_rkul3oDt2FePuJmQcPJCX7-05rGKpZ1Dhus882QvvNwIDnXOrQi0_cctl0lo2KtgreAnlaVbEl5s9hDsiW8U2PSO_vgYGTwbS4QFLYDlKy6sm7XB1DqGUu76goiVVhbKijwW0JsKkJtnCUW803w' -H 'Content-Length: 0' http://localhost:8001/teachers/1000000000007/
+INFO     Logger:logger.py:29 Response status code='404', elapsed_time='0:00:00.004054'
+{
+  "detail": "Teacher not found"
+}

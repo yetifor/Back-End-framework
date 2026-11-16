@@ -1,0 +1,22 @@
+[2026-11-16 19:28:44,325 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 154' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=curtismarshall&password=EHYAJEOXtotFrsuqhHi8d%28Z%29%2Aa_8cg&password_repeat=EHYAJEOXtotFrsuqhHi8d%28Z%29%2Aa_8cg&email=garrettjill%40example.com' http://localhost:8000/auth/register/
+[2026-11-16 19:28:44,326 - INFO] - Response status code='201', elapsed_time='0:00:00.191982'
+{
+  "detail": "User registered"
+}
+
+[2026-11-16 19:28:44,584 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 69' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=curtismarshall&password=EHYAJEOXtotFrsuqhHi8d%28Z%29%2Aa_8cg' http://localhost:8000/auth/login/
+[2026-11-16 19:28:44,584 - INFO] - Response status code='200', elapsed_time='0:00:00.217431'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6ImN1cnRpc21hcnNoYWxsIiwiZXhwIjoxNzk0ODY0NTI0LCJpYXQiOjE3OTQ4NTczMjR9.BU0NazlIBWD1dZNOYR4354uAPoXkeY-Xo2qO74cFED427HTCzg-RdioNx_DBcJpIyKu8Ddr6010uwgCCaUNWcZbqn8yxGgbE5Z0I8ocUIYHGbMuMYgwFB_ygmREVfxKBDXg1yzoeCr5P7GGcRTJGaPhPCOr1iBUyvZMB8FE6aC1qvbeivV2PYd88ZZ_KLzwkyX4uU2QE-Tfsv9GVb2KKMNA2f_OmAK_ZjbUoI7SxPHE7waghj6pIGNoB-F1NN8C0zS4NEVk44ew-JfRzpOwpFpA6iaPfujFTxA-BjbV4fwCHCY85K7AJBIDrLx0bE2adgU0yn8vhKsqjwNZAD2Pe3A",
+  "token_type": "Bearer"
+}
+
+[2026-11-16 19:28:44,592 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6ImN1cnRpc21hcnNoYWxsIiwiZXhwIjoxNzk0ODY0NTI0LCJpYXQiOjE3OTQ4NTczMjR9.BU0NazlIBWD1dZNOYR4354uAPoXkeY-Xo2qO74cFED427HTCzg-RdioNx_DBcJpIyKu8Ddr6010uwgCCaUNWcZbqn8yxGgbE5Z0I8ocUIYHGbMuMYgwFB_ygmREVfxKBDXg1yzoeCr5P7GGcRTJGaPhPCOr1iBUyvZMB8FE6aC1qvbeivV2PYd88ZZ_KLzwkyX4uU2QE-Tfsv9GVb2KKMNA2f_OmAK_ZjbUoI7SxPHE7waghj6pIGNoB-F1NN8C0zS4NEVk44ew-JfRzpOwpFpA6iaPfujFTxA-BjbV4fwCHCY85K7AJBIDrLx0bE2adgU0yn8vhKsqjwNZAD2Pe3A' 'http://localhost:8001/grades/stats/?student_id=43975810'
+[2026-11-16 19:28:44,592 - INFO] - Response status code='200', elapsed_time='0:00:00.006913'
+{
+  "count": 0,
+  "min": null,
+  "max": null,
+  "avg": null
+}
+
