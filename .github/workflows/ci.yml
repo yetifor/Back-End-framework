@@ -90,13 +90,10 @@ jobs:
           path: gh-pages
 
       - name: Generate Allure report
-        uses: simple-elf/allure-report-action@v1.9
-        if: always()
-        with:
-          allure_results: allure_results
-          allure_history: allure_history
-          gh_pages: gh_pages
-          allure_report: allure-report
+        run: : |
+          curl -fL https://github.com -o allure.tgz
+          tar -xzf allure.tgz
+          ./allure-2.32.2/bin/allure generate allure_results -o allure-report --clean
 
       - name: Deploy results to Github Pages
         if: always()
