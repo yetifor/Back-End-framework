@@ -43,7 +43,7 @@ jobs:
         run: docker compose -p app up -d --wait
 
       - name: Build image
-        run: docker build api-tests .
+        run: docker build -t api-tests .
 
       - name: Start tests
         run: |
