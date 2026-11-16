@@ -39,5 +39,14 @@ jobs:
           UNIVERSITY_SERVICE_API_URL=${{ vars.UNIVERSITY_SERVICE_API_URL }}
           EOF
 
-      - name: Biuld Docker Image 2
-        run: docker build -t myapp .
+      - name: Biuld Docker Image
+        run: docker build -t CI-tests .
+      - name: Start service
+        run: docker compose up -d
+
+  generate-report:
+    runs-on: ubuntu-latest
+    needs: tests
+    name: generate report
+    steps:
+      - name:

@@ -1,10 +1,6 @@
 import requests
-from services.university.university_models.grade_status_response import GradeStatisticResponse
-from services.general.helpers.base_helper import BaseHelper
-from services.university.university_models.grade_request import GradeRequest
-from services.university.university_models.grade_response import GradeResponse
-from services.university.university_models.grade_status_response import GradeStatisticResponse
 
+from services.general.helpers.base_helper import BaseHelper
 
 
 class GradeHelper(BaseHelper):

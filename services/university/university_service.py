@@ -1,4 +1,3 @@
-import requests
 
 from services.general.base_service import BaseService
 from services.university.university_helpers.grade_helper import GradeHelper
@@ -7,13 +6,17 @@ from services.university.university_helpers.student_helper import StudentHelper
 from services.university.university_helpers.teacher_helper import TeacherHelper
 from services.university.university_models.grade_request import GradeRequest
 from services.university.university_models.grade_response import GradeResponse
+from services.university.university_models.grade_status_response import (
+    GradeStatisticResponse,
+)
 from services.university.university_models.group_delete_response import GroupDeleteModel
-from services.university.university_models.grade_status_response import GradeStatisticResponse
 from services.university.university_models.group_request import GroupRequest
 from services.university.university_models.group_response import GroupResponse
 from services.university.university_models.student_request import StudentRequest
 from services.university.university_models.student_response import StudentResponse
-from services.university.university_models.teacher_delete_response import TeacherDeleteResponse
+from services.university.university_models.teacher_delete_response import (
+    TeacherDeleteResponse,
+)
 from services.university.university_models.teacher_request import TeacherRequest
 from services.university.university_models.teacher_response import TeacherResponse
 from utils.api_utils import ApiUtils

@@ -1,9 +1,9 @@
+from faker import Faker
+
 from logger.logger import Logger
 from services.university.university_models.base_teacher import SubjectEnum
 from services.university.university_models.teacher_request import TeacherRequest
 from services.university.university_service import UniversityService
-from faker import Faker
-from tests.postgress import delete_database
 
 faker = Faker()
 import random
@@ -11,7 +11,7 @@ import random
 
 class TestCreateTeacher:
     def test_teacher(self, university_api_utils_admin, delete_database):
-        Logger.info(f"### Step 1. Create teacher")
+        Logger.info("### Step 1. Create teacher")
         university_service = UniversityService(api_utils=university_api_utils_admin)
         teacher = TeacherRequest(first_name=faker.first_name(),
                                  last_name=faker.last_name(),

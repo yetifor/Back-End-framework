@@ -3,16 +3,13 @@ import random
 from faker import Faker
 
 from logger.logger import Logger
-from services.university.university_models.base_grade import MAX_GRADE_VALUE, MIN_GRADE_VALUE
-from services.university.university_helpers.grade_helper import GradeHelper
-from services.university.university_models import student_request, grade_response
 from services.university.university_models.base_student import DegreeEnum
 from services.university.university_models.base_teacher import SubjectEnum
 from services.university.university_models.grade_request import GradeRequest
-
-from services.university.university_models.grade_status_response import GradeStatisticResponse
+from services.university.university_models.grade_status_response import (
+    GradeStatisticResponse,
+)
 from services.university.university_models.group_request import GroupRequest
-from services.university.university_models.group_response import GroupResponse
 from services.university.university_models.student_request import StudentRequest
 from services.university.university_models.teacher_request import TeacherRequest
 from services.university.university_service import UniversityService
@@ -231,7 +228,7 @@ class TestStatsGrade:
         expected_max = None
 
         with SoftAssert() as sa:
-            sa.soft_assert(stats.count, expected_count, f"Test count")
+            sa.soft_assert(stats.count, expected_count, "Test count")
             sa.soft_assert(stats.avg, expected_avg, f"Test avg/Actual count: {stats.count}")
             sa.soft_assert(stats.min, expected_min, "Test min")
             sa.soft_assert(stats.avg, expected_max, "Test max")

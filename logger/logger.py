@@ -2,8 +2,8 @@ import logging
 import os
 import sys
 from logging.handlers import RotatingFileHandler
+
 from logger.logger_config import LoggerConfig
-from typing import Union
 
 
 class Logger:
@@ -21,7 +21,7 @@ class Logger:
     __logger.addHandler(__handler2)
 
     @staticmethod
-    def set_level(level: Union[str, int]) -> None:
+    def set_level(level: str | int) -> None:
         Logger.__logger.setLevel(level)
 
     @staticmethod

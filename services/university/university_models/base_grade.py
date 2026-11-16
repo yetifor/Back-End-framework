@@ -1,7 +1,5 @@
-from enum import IntEnum
 
 from pydantic import BaseModel, Field
-
 
 MIN_GRADE_VALUE = 0
 MAX_GRADE_VALUE = 5

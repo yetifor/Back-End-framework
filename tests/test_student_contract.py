@@ -1,18 +1,18 @@
 from faker import Faker
 
-from services.university.university_helpers.group_helper import GroupHelper
 from services.university.university_helpers.student_helper import StudentHelper
 from services.university.university_models.base_student import DegreeEnum
 
 faker = Faker()
 import random
+
 from logger.logger import Logger
 
 
 class TestStudentContract:
 
     def test_create_student(self, university_api_utils_admin):
-        Logger.info(f"### Step 1: Create student")
+        Logger.info("### Step 1: Create student")
         student_helper = StudentHelper(university_api_utils_admin)
         student = student_helper.post_student({"first_name": faker.first_name(),
                                                "last_name": faker.last_name(),
@@ -23,4 +23,4 @@ class TestStudentContract:
 
         assert student.status_code == 201, \
             (f"Wrong status code: {student.status_code}",
-             f"Assert status code: 201")
+             "Assert status code: 201")

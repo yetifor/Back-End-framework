@@ -3,12 +3,11 @@ import random
 import psycopg2
 import pytest
 from faker import Faker
-from pydantic import EmailStr
 
 from logger.logger import Logger
-from services.auth.auth_service import AuthService
 from services.auth.auth_models.login_request import LoginRequest
 from services.auth.auth_models.register_request import RegisterRequest
+from services.auth.auth_service import AuthService
 from services.university.university_models.base_student import DegreeEnum
 from services.university.university_models.base_teacher import SubjectEnum
 from services.university.university_models.group_request import GroupRequest
