@@ -1,0 +1,33 @@
+[2026-11-16 19:34:04,231 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 177' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=gilmorerachel&password=uwSgoW%2B%5E%24z%23%2BNxy%40%280zJc%40%21KsqNF%291&password_repeat=uwSgoW%2B%5E%24z%23%2BNxy%40%280zJc%40%21KsqNF%291&email=tracy01%40example.org' http://localhost:8000/auth/register/
+[2026-11-16 19:34:04,231 - INFO] - Response status code='201', elapsed_time='0:00:00.192914'
+{
+  "detail": "User registered"
+}
+
+[2026-11-16 19:34:04,488 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 82' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=gilmorerachel&password=uwSgoW%2B%5E%24z%23%2BNxy%40%280zJc%40%21KsqNF%291' http://localhost:8000/auth/login/
+[2026-11-16 19:34:04,488 - INFO] - Response status code='200', elapsed_time='0:00:00.216636'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE4LCJ1c2VybmFtZSI6ImdpbG1vcmVyYWNoZWwiLCJleHAiOjE3OTQ4NjQ4NDQsImlhdCI6MTc5NDg1NzY0NH0.NOhhj_dZk3xBgLXFOc2cvH0Chx4YnI2pl1QNncKwZPwBnPEEOzjFiBJfQwQTMjg4ywOXE0eK3BuEyf0d_Mn1XHVI9CNNZhg5CoyMowc8w0oXgTUrhNDnS1hoB_sEtqbBGWA-N0RqmxpkrEGqzI1Pmqg-1hUJsjGIpSsp4CoHM58pXqIEmdHdfygfmFHBGPDekJqMypHyM3eugSbauoAoYF1tLH4pAPZa0_lIsU8TBmiG1WPb85NHQ6105iajiYfVvorn81o0Plawy9Mp_Hmi7dLSJtNi-BkJrjbXlu8Gvuew1TFfWQMy06H0Iyf2L4V5QBIg8jtVga47Ne-QwluyTw",
+  "token_type": "Bearer"
+}
+
+[2026-11-16 19:34:04,489 - INFO] - ### Step 1. Create teacher
+[2026-11-16 19:34:04,495 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE4LCJ1c2VybmFtZSI6ImdpbG1vcmVyYWNoZWwiLCJleHAiOjE3OTQ4NjQ4NDQsImlhdCI6MTc5NDg1NzY0NH0.NOhhj_dZk3xBgLXFOc2cvH0Chx4YnI2pl1QNncKwZPwBnPEEOzjFiBJfQwQTMjg4ywOXE0eK3BuEyf0d_Mn1XHVI9CNNZhg5CoyMowc8w0oXgTUrhNDnS1hoB_sEtqbBGWA-N0RqmxpkrEGqzI1Pmqg-1hUJsjGIpSsp4CoHM58pXqIEmdHdfygfmFHBGPDekJqMypHyM3eugSbauoAoYF1tLH4pAPZa0_lIsU8TBmiG1WPb85NHQ6105iajiYfVvorn81o0Plawy9Mp_Hmi7dLSJtNi-BkJrjbXlu8Gvuew1TFfWQMy06H0Iyf2L4V5QBIg8jtVga47Ne-QwluyTw' -H 'Content-Length: 67' -H 'Content-Type: application/json' -d '{"first_name": "David", "last_name": "Davenport", "subject": "old"}' http://localhost:8001/teachers/
+[2026-11-16 19:34:04,495 - INFO] - Response status code='422', elapsed_time='0:00:00.005541'
+{
+  "detail": [
+    {
+      "type": "enum",
+      "loc": [
+        "body",
+        "subject"
+      ],
+      "msg": "Input should be 'Mathematics', 'Physics', 'History', 'Biology' or 'Geography'",
+      "input": "old",
+      "ctx": {
+        "expected": "'Mathematics', 'Physics', 'History', 'Biology' or 'Geography'"
+      }
+    }
+  ]
+}
+

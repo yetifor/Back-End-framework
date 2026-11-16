@@ -1,0 +1,18 @@
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 158' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=carlos65&password=YX%268h1%23r9%259Yg%25kI%5EGWf%23I_G0MCDNJ&password_repeat=YX%268h1%23r9%259Yg%25kI%5EGWf%23I_G0MCDNJ&email=jstafford%40example.com' http://localhost:8000/auth/register/
+INFO     Logger:logger.py:29 Response status code='201', elapsed_time='0:00:00.192956'
+{
+  "detail": "User registered"
+}
+
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 69' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=carlos65&password=YX%268h1%23r9%259Yg%25kI%5EGWf%23I_G0MCDNJ' http://localhost:8000/auth/login/
+INFO     Logger:logger.py:29 Response status code='200', elapsed_time='0:00:00.216681'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiY2FybG9zNjUiLCJleHAiOjE3OTQ4NjQ4MjMsImlhdCI6MTc5NDg1NzYyM30.E6UzjfmGmeuZ5ycPyF-lIWyIKqtChU1aVudqJUB2sx8obpqE8CeUDXkO0-xJS68hO85my62szBVdnSrNqTCUOXZMeVQiBn6KEht3sDTjT475TrV8b5429-GLuIDKkgYD8VLbIIt700fIetzcfyyySPyrQbjSv9eh7gNhCLxHRHlTYZMff-AEEntfuSKWhaejFBpbDqOtDwGfFzOGN9-8d-KBmr-j5ZH3_vdQyjik-nQwoHz11GHWvks_TAF9FdrAVxvmsnRH7tep55iZnKmIdZMohRwCvMEAoLzpP5STiibhpUSBJQhZetmeZPKfQjRu_3Z2snztHWOnmSBxiizJLg",
+  "token_type": "Bearer"
+}
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiY2FybG9zNjUiLCJleHAiOjE3OTQ4NjQ4MjMsImlhdCI6MTc5NDg1NzYyM30.E6UzjfmGmeuZ5ycPyF-lIWyIKqtChU1aVudqJUB2sx8obpqE8CeUDXkO0-xJS68hO85my62szBVdnSrNqTCUOXZMeVQiBn6KEht3sDTjT475TrV8b5429-GLuIDKkgYD8VLbIIt700fIetzcfyyySPyrQbjSv9eh7gNhCLxHRHlTYZMff-AEEntfuSKWhaejFBpbDqOtDwGfFzOGN9-8d-KBmr-j5ZH3_vdQyjik-nQwoHz11GHWvks_TAF9FdrAVxvmsnRH7tep55iZnKmIdZMohRwCvMEAoLzpP5STiibhpUSBJQhZetmeZPKfQjRu_3Z2snztHWOnmSBxiizJLg' -H 'Content-Length: 23' -H 'Content-Type: application/json' -d '{"name": "Mark Castro"}' http://localhost:8001/groups/
+INFO     Logger:logger.py:29 Response status code='201', elapsed_time='0:00:00.008639'
+{
+  "name": "Mark Castro",
+  "id": 1
+}

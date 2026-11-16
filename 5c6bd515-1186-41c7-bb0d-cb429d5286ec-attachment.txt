@@ -1,0 +1,32 @@
+[2026-11-16 19:33:45,675 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 148' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=stephanie08&password=o%2BP44jeGae%21xKgtHr5cNMDFdYoalEz&password_repeat=o%2BP44jeGae%21xKgtHr5cNMDFdYoalEz&email=gonzalezadam%40example.net' http://localhost:8000/auth/register/
+[2026-11-16 19:33:45,675 - INFO] - Response status code='201', elapsed_time='0:00:00.192205'
+{
+  "detail": "User registered"
+}
+
+[2026-11-16 19:33:45,932 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 64' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=stephanie08&password=o%2BP44jeGae%21xKgtHr5cNMDFdYoalEz' http://localhost:8000/auth/login/
+[2026-11-16 19:33:45,932 - INFO] - Response status code='200', elapsed_time='0:00:00.216536'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjksInVzZXJuYW1lIjoic3RlcGhhbmllMDgiLCJleHAiOjE3OTQ4NjQ4MjUsImlhdCI6MTc5NDg1NzYyNX0.DP7R61umVivMTD9pxLxAAEmReZ88blFvnS4b1J7IMeUH9_FiyDyc0zOi0HQp7kG_fRBpoKBXDFUhC8K-d9qVZXYO2dGdNWtVrqbatoq229vkcfptaJ7zCQlK4Jdx6iaFYSHmhnAmSXY402vjU3Uv29ZbZ6kF7QW65cxy6rhmAtTXsfP3jdFUWJ--BQHu1dS1K7Xa2XTP5p25wqrjJcRVipbjjFEG_EDMHT2CuUDUg7F3R5qGanrzM4OBmfRTdTPQRBl5K9bCDp1rxdLTeb_cV-OcpfCqFzGU5LifxcW7iz_hQIOfBlg_RyUiVf_wsBfpLDi6qsPoBYkNvwwod8qXGQ",
+  "token_type": "Bearer"
+}
+
+[2026-11-16 19:33:45,933 - INFO] - ### Step 1. Create Teacher ###
+[2026-11-16 19:33:45,941 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjksInVzZXJuYW1lIjoic3RlcGhhbmllMDgiLCJleHAiOjE3OTQ4NjQ4MjUsImlhdCI6MTc5NDg1NzYyNX0.DP7R61umVivMTD9pxLxAAEmReZ88blFvnS4b1J7IMeUH9_FiyDyc0zOi0HQp7kG_fRBpoKBXDFUhC8K-d9qVZXYO2dGdNWtVrqbatoq229vkcfptaJ7zCQlK4Jdx6iaFYSHmhnAmSXY402vjU3Uv29ZbZ6kF7QW65cxy6rhmAtTXsfP3jdFUWJ--BQHu1dS1K7Xa2XTP5p25wqrjJcRVipbjjFEG_EDMHT2CuUDUg7F3R5qGanrzM4OBmfRTdTPQRBl5K9bCDp1rxdLTeb_cV-OcpfCqFzGU5LifxcW7iz_hQIOfBlg_RyUiVf_wsBfpLDi6qsPoBYkNvwwod8qXGQ' -H 'Content-Length: 68' -H 'Content-Type: application/json' -d '{"first_name": "Karen", "last_name": "Miller", "subject": "Physics"}' http://localhost:8001/teachers/
+[2026-11-16 19:33:45,941 - INFO] - Response status code='201', elapsed_time='0:00:00.007754'
+{
+  "first_name": "Karen",
+  "last_name": "Miller",
+  "subject": "Physics",
+  "id": 3
+}
+
+[2026-11-16 19:33:45,987 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjksInVzZXJuYW1lIjoic3RlcGhhbmllMDgiLCJleHAiOjE3OTQ4NjQ4MjUsImlhdCI6MTc5NDg1NzYyNX0.DP7R61umVivMTD9pxLxAAEmReZ88blFvnS4b1J7IMeUH9_FiyDyc0zOi0HQp7kG_fRBpoKBXDFUhC8K-d9qVZXYO2dGdNWtVrqbatoq229vkcfptaJ7zCQlK4Jdx6iaFYSHmhnAmSXY402vjU3Uv29ZbZ6kF7QW65cxy6rhmAtTXsfP3jdFUWJ--BQHu1dS1K7Xa2XTP5p25wqrjJcRVipbjjFEG_EDMHT2CuUDUg7F3R5qGanrzM4OBmfRTdTPQRBl5K9bCDp1rxdLTeb_cV-OcpfCqFzGU5LifxcW7iz_hQIOfBlg_RyUiVf_wsBfpLDi6qsPoBYkNvwwod8qXGQ' 'http://localhost:8001/grades/stats/?teacher_id=3'
+[2026-11-16 19:33:45,987 - INFO] - Response status code='200', elapsed_time='0:00:00.004523'
+{
+  "count": 0,
+  "min": null,
+  "max": null,
+  "avg": null
+}
+
