@@ -90,10 +90,10 @@ jobs:
           path: gh-pages
 
       - name: Generate Allure report
-        run: : |
+        run: |
           curl -fL https://github.com -o allure.tgz
           tar -xzf allure.tgz
-          ./allure-2.32.2/bin/allure generate allure_results -o allure-report --clean
+          ./allure-2.32.2/bin/allure generate allure-results -o allure-report --clean
 
       - name: Deploy results to Github Pages
         if: always()
