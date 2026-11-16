@@ -48,7 +48,7 @@ jobs:
       - name: Start tests
         run: |
           docker run --rm \
-          --network api_default \
+          --network app_default \
           --env-file .env \
           -v ${{ github.workspace }}/allure_results:/app/allure_results \
           api-tests
