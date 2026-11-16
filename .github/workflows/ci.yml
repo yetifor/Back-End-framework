@@ -52,7 +52,7 @@ jobs:
         run: |
           docker run --rm \
           --network host \
-          --env-file .env \
+          --env-file .env \ 
           -v ${{ github.workspace }}/allure_results:/app/allure_results \
           api-tests
 
