@@ -1,7 +1,0 @@
-[2026-11-16 19:10:40,855 - INFO] - ### Step 1. Create teacher
-[2026-11-16 19:10:40,858 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 68' -H 'Content-Type: application/json' -d '{"first_name": "Rachel", "last_name": "Price", "subject": "Physics"}' http://localhost:8001/teachers/
-[2026-11-16 19:10:40,858 - INFO] - Response status code='403', elapsed_time='0:00:00.001441'
-{
-  "detail": "Access denied"
-}
-

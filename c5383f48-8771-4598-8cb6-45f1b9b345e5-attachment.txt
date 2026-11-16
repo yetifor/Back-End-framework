@@ -1,0 +1,28 @@
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 160' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=williamswilliam&password=7YA%29equA80IaqX5T5%26Vl%5EV%409m%29_mym&password_repeat=7YA%29equA80IaqX5T5%26Vl%5EV%409m%29_mym&email=fdaniels%40example.com' http://localhost:8000/auth/register/
+INFO     Logger:logger.py:29 Response status code='201', elapsed_time='0:00:00.272829'
+{
+  "detail": "User registered"
+}
+
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 74' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=williamswilliam&password=7YA%29equA80IaqX5T5%26Vl%5EV%409m%29_mym' http://localhost:8000/auth/login/
+INFO     Logger:logger.py:29 Response status code='200', elapsed_time='0:00:00.312740'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjcsInVzZXJuYW1lIjoid2lsbGlhbXN3aWxsaWFtIiwiZXhwIjoxNzk0ODY0MzI0LCJpYXQiOjE3OTQ4NTcxMjR9.ABxmr4EwxH4QjSecpioahfdetBAMkfwEd6widJwF54EJpHkovVqYShpgKaaSeSSVoL5NU_VmqQkR1VCNl3DPxx1VJzmG0D5GLP-uPKUSrCwYXX8tFZ1IlE-h5L6EEi79_z2_K9l6wWdWNR9jKkvRQfBuSi_fcYo3DKFbkcs0oy_a-ii--mGsQ7HmhVD1iLX-CEV5pwmVdKJ4fj7XRqbd1HyFWWhQ1VxmdJvukrN1iLy8hAk9HeDL4fyCzz-e8Snl199lhriLFISp_whOk2VG5NeLmR1WWDy_O2OeLJfJJU8Na8NTkNXKgGIPHQElmkOdnL6oVsH2T_6EPHBvJQaSyg",
+  "token_type": "Bearer"
+}
+INFO     Logger:logger.py:29 ### Step 1. Create Student
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjcsInVzZXJuYW1lIjoid2lsbGlhbXN3aWxsaWFtIiwiZXhwIjoxNzk0ODY0MzI0LCJpYXQiOjE3OTQ4NTcxMjR9.ABxmr4EwxH4QjSecpioahfdetBAMkfwEd6widJwF54EJpHkovVqYShpgKaaSeSSVoL5NU_VmqQkR1VCNl3DPxx1VJzmG0D5GLP-uPKUSrCwYXX8tFZ1IlE-h5L6EEi79_z2_K9l6wWdWNR9jKkvRQfBuSi_fcYo3DKFbkcs0oy_a-ii--mGsQ7HmhVD1iLX-CEV5pwmVdKJ4fj7XRqbd1HyFWWhQ1VxmdJvukrN1iLy8hAk9HeDL4fyCzz-e8Snl199lhriLFISp_whOk2VG5NeLmR1WWDy_O2OeLJfJJU8Na8NTkNXKgGIPHQElmkOdnL6oVsH2T_6EPHBvJQaSyg' -H 'Content-Length: 159' -H 'Content-Type: application/json' -d '{"first_name": "Andrew", "last_name": "Mccarty", "email": "mary35@example.com", "degree": "Associate", "phone": "+72677482330", "group_id": "invalid_group_id"}' http://localhost:8001/students/
+INFO     Logger:logger.py:29 Response status code='422', elapsed_time='0:00:00.010375'
+{
+  "detail": [
+    {
+      "type": "int_parsing",
+      "loc": [
+        "body",
+        "group_id"
+      ],
+      "msg": "Input should be a valid integer, unable to parse string as an integer",
+      "input": "invalid_group_id"
+    }
+  ]
+}

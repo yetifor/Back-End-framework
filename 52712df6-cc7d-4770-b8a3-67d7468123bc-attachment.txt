@@ -1,0 +1,24 @@
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 152' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=carol66&password=WSw%297%2AbU362%21HJ9hH%28X%23IGtRMEjAcP&password_repeat=WSw%297%2AbU362%21HJ9hH%28X%23IGtRMEjAcP&email=tracey87%40example.org' http://localhost:8000/auth/register/
+INFO     Logger:logger.py:29 Response status code='201', elapsed_time='0:00:00.273031'
+{
+  "detail": "User registered"
+}
+
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 66' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=carol66&password=WSw%297%2AbU362%21HJ9hH%28X%23IGtRMEjAcP' http://localhost:8000/auth/login/
+INFO     Logger:logger.py:29 Response status code='200', elapsed_time='0:00:00.312894'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE0LCJ1c2VybmFtZSI6ImNhcm9sNjYiLCJleHAiOjE3OTQ4NjQzNDUsImlhdCI6MTc5NDg1NzE0NX0.Z0jCzSf8yoDFyYJgkadNzn-slUPhfELs34JlLrZhF8qpTLqzbKDhHQi1kP6iiM6_RR8isrJYfHbkNk6mZQz8I6e7ad4wFf831uFSMWNkb1RXL3SfQTwko3_fJlf_rKQ6tdZPfxLviwjHwdw2ibh1Z-dAH7Oz1JYP8r9OhfObJNCTNtL_8_NQUfRb-wEc3O1ndPfAXAQGWoZ8qxsaybUcByvYEXxN976NjdJO1urmjKV1C3EUhxyLU0miEj4icz6QsK0IIgKQOL3cdXORbTecoAejrjAMmbb8FEG8h4uZHiPgQsZfiivK_rLUyPNCjD8SsSIrSOuQVqVsTjxa0Kr1PQ",
+  "token_type": "Bearer"
+}
+INFO     Logger:logger.py:29 ### Step 1: Create student
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE0LCJ1c2VybmFtZSI6ImNhcm9sNjYiLCJleHAiOjE3OTQ4NjQzNDUsImlhdCI6MTc5NDg1NzE0NX0.Z0jCzSf8yoDFyYJgkadNzn-slUPhfELs34JlLrZhF8qpTLqzbKDhHQi1kP6iiM6_RR8isrJYfHbkNk6mZQz8I6e7ad4wFf831uFSMWNkb1RXL3SfQTwko3_fJlf_rKQ6tdZPfxLviwjHwdw2ibh1Z-dAH7Oz1JYP8r9OhfObJNCTNtL_8_NQUfRb-wEc3O1ndPfAXAQGWoZ8qxsaybUcByvYEXxN976NjdJO1urmjKV1C3EUhxyLU0miEj4icz6QsK0IIgKQOL3cdXORbTecoAejrjAMmbb8FEG8h4uZHiPgQsZfiivK_rLUyPNCjD8SsSIrSOuQVqVsTjxa0Kr1PQ' -H 'Content-Length: 140' -H 'Content-Type: application/json' -d '{"first_name": "Amy", "last_name": "Hunt", "email": "carterjames@example.net", "degree": "Bachelor", "phone": "+75893692041", "group_id": 1}' http://localhost:8001/students/
+INFO     Logger:logger.py:29 Response status code='201', elapsed_time='0:00:00.011657'
+{
+  "first_name": "Amy",
+  "last_name": "Hunt",
+  "email": "carterjames@example.net",
+  "degree": "Bachelor",
+  "phone": "+75893692041",
+  "group_id": 1,
+  "id": 4
+}
