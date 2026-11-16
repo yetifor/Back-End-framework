@@ -1,0 +1,20 @@
+[2026-11-16 19:28:51,616 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 151' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=grossdonna&password=SotQBI1%21%5EfKsbrVJc8T61JSpboz%25U%2B&password_repeat=SotQBI1%21%5EfKsbrVJc8T61JSpboz%25U%2B&email=taylor59%40example.com' http://localhost:8000/auth/register/
+[2026-11-16 19:28:51,616 - INFO] - Response status code='201', elapsed_time='0:00:00.302077'
+{
+  "detail": "User registered"
+}
+
+[2026-11-16 19:28:51,992 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 67' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=grossdonna&password=SotQBI1%21%5EfKsbrVJc8T61JSpboz%25U%2B' http://localhost:8000/auth/login/
+[2026-11-16 19:28:51,992 - INFO] - Response status code='200', elapsed_time='0:00:00.335040'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiZ3Jvc3Nkb25uYSIsImV4cCI6MTc5NDg2NDUzMSwiaWF0IjoxNzk0ODU3MzMxfQ.AKrHQQ-235CcvHvCW2qf6sAEqQltZPkEwC_jtwwmMm8BLvu8qBrzdQphvdnVqAXBC_BWsWR2MA-6zerZn1yGhJs2QpznEUXjuvV-pywUV5Zfi95ZXNPPWOHUQUmjIkw38KnGxLpEmRlwL90sFfYEKwsxaeEJgr67ypuHEsMcxe_sgZZCkEzfwJeZv34TyF5YQvAb2RCLL-J5zzi42MPKP85969ZaTTCI8pRpqVyId96X9e23zMgJMqlwEcRXksLv5I1uSI7U7kUsKnK6yEMkMmOhx1fkjDKP_n5M0E_NAxOD1THR5WXB5divK2XzsFe7GHe2AEmMRouWNu0BGl-5qg",
+  "token_type": "Bearer"
+}
+
+[2026-11-16 19:28:52,007 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiZ3Jvc3Nkb25uYSIsImV4cCI6MTc5NDg2NDUzMSwiaWF0IjoxNzk0ODU3MzMxfQ.AKrHQQ-235CcvHvCW2qf6sAEqQltZPkEwC_jtwwmMm8BLvu8qBrzdQphvdnVqAXBC_BWsWR2MA-6zerZn1yGhJs2QpznEUXjuvV-pywUV5Zfi95ZXNPPWOHUQUmjIkw38KnGxLpEmRlwL90sFfYEKwsxaeEJgr67ypuHEsMcxe_sgZZCkEzfwJeZv34TyF5YQvAb2RCLL-J5zzi42MPKP85969ZaTTCI8pRpqVyId96X9e23zMgJMqlwEcRXksLv5I1uSI7U7kUsKnK6yEMkMmOhx1fkjDKP_n5M0E_NAxOD1THR5WXB5divK2XzsFe7GHe2AEmMRouWNu0BGl-5qg' -H 'Content-Length: 24' -H 'Content-Type: application/json' -d '{"name": "Jill Maxwell"}' http://localhost:8001/groups/
+[2026-11-16 19:28:52,007 - INFO] - Response status code='201', elapsed_time='0:00:00.012990'
+{
+  "name": "Jill Maxwell",
+  "id": 1
+}
+
