@@ -1,0 +1,28 @@
+[2026-11-16 18:59:04,961 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 164' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=grantedward&password=%26%2AshEYUcO%236en%29v%24TWi4%28e3hH7w7Ed&password_repeat=%26%2AshEYUcO%236en%29v%24TWi4%28e3hH7w7Ed&email=snyderrobert%40example.org' http://localhost:8000/auth/register/
+[2026-11-16 18:59:04,961 - INFO] - Response status code='201', elapsed_time='0:00:00.238823'
+{
+  "detail": "User registered"
+}
+
+[2026-11-16 18:59:05,275 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 72' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=grantedward&password=%26%2AshEYUcO%236en%29v%24TWi4%28e3hH7w7Ed' http://localhost:8000/auth/login/
+[2026-11-16 18:59:05,275 - INFO] - Response status code='200', elapsed_time='0:00:00.273423'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUsInVzZXJuYW1lIjoiZ3JhbnRlZHdhcmQiLCJleHAiOjE3OTQ4NjI3NDUsImlhdCI6MTc5NDg1NTU0NX0.f-RG7D2A2LgfTeLW7CReo0-wPxY7rQpT4UEzHv94EJ0mPnsOzl-cyo_pvKo0WBXnKgWTaoIGw1q2IekeMQl-8RHiKV5j0ceBdqFm4yBw_qsevnYdbp3ZlSdO2_V1Y9BfVEEJkMdcHwzQa8KM8vCxjdLy4w59OdBbho1sQNsvWy44p-PBUmIirEVzaQpwFP6GcMu2bKWdZw2wKIghPqAKADQnlgQ0JKEbj7snsY1llf2HGuFcx5LK0IHDhhlLbRu5XpS0_3WH54y2RN8hyMrhi-RE_U6ffRh-rphf4ssxnVczx9tT3mqeURhUpO4lgPUkTI6M94hVnhOQk01JAyVxzw",
+  "token_type": "Bearer"
+}
+
+[2026-11-16 18:59:05,276 - INFO] - ### Step 1. Create Group
+[2026-11-16 18:59:05,286 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUsInVzZXJuYW1lIjoiZ3JhbnRlZHdhcmQiLCJleHAiOjE3OTQ4NjI3NDUsImlhdCI6MTc5NDg1NTU0NX0.f-RG7D2A2LgfTeLW7CReo0-wPxY7rQpT4UEzHv94EJ0mPnsOzl-cyo_pvKo0WBXnKgWTaoIGw1q2IekeMQl-8RHiKV5j0ceBdqFm4yBw_qsevnYdbp3ZlSdO2_V1Y9BfVEEJkMdcHwzQa8KM8vCxjdLy4w59OdBbho1sQNsvWy44p-PBUmIirEVzaQpwFP6GcMu2bKWdZw2wKIghPqAKADQnlgQ0JKEbj7snsY1llf2HGuFcx5LK0IHDhhlLbRu5XpS0_3WH54y2RN8hyMrhi-RE_U6ffRh-rphf4ssxnVczx9tT3mqeURhUpO4lgPUkTI6M94hVnhOQk01JAyVxzw' -H 'Content-Length: 28' -H 'Content-Type: application/json' -d '{"name": "Heather Thompson"}' http://localhost:8001/groups/
+[2026-11-16 18:59:05,286 - INFO] - Response status code='201', elapsed_time='0:00:00.008815'
+{
+  "name": "Heather Thompson",
+  "id": 2
+}
+
+[2026-11-16 18:59:05,286 - INFO] - ### Step 2. Delete Group
+[2026-11-16 18:59:05,334 - INFO] - Request:curl -X DELETE -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUsInVzZXJuYW1lIjoiZ3JhbnRlZHdhcmQiLCJleHAiOjE3OTQ4NjI3NDUsImlhdCI6MTc5NDg1NTU0NX0.f-RG7D2A2LgfTeLW7CReo0-wPxY7rQpT4UEzHv94EJ0mPnsOzl-cyo_pvKo0WBXnKgWTaoIGw1q2IekeMQl-8RHiKV5j0ceBdqFm4yBw_qsevnYdbp3ZlSdO2_V1Y9BfVEEJkMdcHwzQa8KM8vCxjdLy4w59OdBbho1sQNsvWy44p-PBUmIirEVzaQpwFP6GcMu2bKWdZw2wKIghPqAKADQnlgQ0JKEbj7snsY1llf2HGuFcx5LK0IHDhhlLbRu5XpS0_3WH54y2RN8hyMrhi-RE_U6ffRh-rphf4ssxnVczx9tT3mqeURhUpO4lgPUkTI6M94hVnhOQk01JAyVxzw' -H 'Content-Length: 0' http://localhost:8001/groups/2/
+[2026-11-16 18:59:05,334 - INFO] - Response status code='200', elapsed_time='0:00:00.006407'
+{
+  "detail": "Group deleted"
+}
+

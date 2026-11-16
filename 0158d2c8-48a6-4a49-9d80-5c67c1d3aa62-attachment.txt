@@ -1,0 +1,23 @@
+[2026-11-16 18:59:26,027 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 150' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=theodore97&password=ayGJj5juK%29paUeVACB2%2AA_Os%40ML6yb&password_repeat=ayGJj5juK%29paUeVACB2%2AA_Os%40ML6yb&email=bennetttony%40example.org' http://localhost:8000/auth/register/
+[2026-11-16 18:59:26,027 - INFO] - Response status code='201', elapsed_time='0:00:00.238581'
+{
+  "detail": "User registered"
+}
+
+[2026-11-16 18:59:26,341 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 65' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=theodore97&password=ayGJj5juK%29paUeVACB2%2AA_Os%40ML6yb' http://localhost:8000/auth/login/
+[2026-11-16 18:59:26,341 - INFO] - Response status code='200', elapsed_time='0:00:00.273449'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE1LCJ1c2VybmFtZSI6InRoZW9kb3JlOTciLCJleHAiOjE3OTQ4NjI3NjYsImlhdCI6MTc5NDg1NTU2Nn0.jTkP2IqwdDQgleIBcr6hYjrlXspPyIYjK1Wxw-5eBnU0oKcCJuIUueOHUzS7n11x_V7mkQM__w0RDI65ZeHW04Ri9VtriAdeJfjCSDJ6yjtMAy2BWgcNK9F9ylTbVEpRtdIZ-gTA15xRDh7n6YQf7KjGXJ4wHMzyFWKpbCG5kgAGHfKQeW_BNe1KJ6I6bejvfRWu8BjqdxjlvhgOIQt15ikUvu97mqq_xzaAD697xZefajT4Cn6e52xPiwno3uKGPfNBx5mMnmDN-aRSCIPmL_6sNBhnqeM_hu4jcK0efyWuSf9e1NfebKDLki2DYAg_uw7EgKNTnz3VFrkiq8qiFg",
+  "token_type": "Bearer"
+}
+
+[2026-11-16 18:59:26,342 - INFO] - ### Step 1. Create teacher
+[2026-11-16 18:59:26,351 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE1LCJ1c2VybmFtZSI6InRoZW9kb3JlOTciLCJleHAiOjE3OTQ4NjI3NjYsImlhdCI6MTc5NDg1NTU2Nn0.jTkP2IqwdDQgleIBcr6hYjrlXspPyIYjK1Wxw-5eBnU0oKcCJuIUueOHUzS7n11x_V7mkQM__w0RDI65ZeHW04Ri9VtriAdeJfjCSDJ6yjtMAy2BWgcNK9F9ylTbVEpRtdIZ-gTA15xRDh7n6YQf7KjGXJ4wHMzyFWKpbCG5kgAGHfKQeW_BNe1KJ6I6bejvfRWu8BjqdxjlvhgOIQt15ikUvu97mqq_xzaAD697xZefajT4Cn6e52xPiwno3uKGPfNBx5mMnmDN-aRSCIPmL_6sNBhnqeM_hu4jcK0efyWuSf9e1NfebKDLki2DYAg_uw7EgKNTnz3VFrkiq8qiFg' -H 'Content-Length: 71' -H 'Content-Type: application/json' -d '{"first_name": "Adrienne", "last_name": "Mosley", "subject": "Biology"}' http://localhost:8001/teachers/
+[2026-11-16 18:59:26,351 - INFO] - Response status code='201', elapsed_time='0:00:00.008662'
+{
+  "first_name": "Adrienne",
+  "last_name": "Mosley",
+  "subject": "Biology",
+  "id": 6
+}
+

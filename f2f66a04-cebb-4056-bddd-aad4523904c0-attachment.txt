@@ -1,0 +1,20 @@
+[2026-11-16 18:59:04,394 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 160' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=charles25&password=H%2A%2BpWLKz%40_DQVt5%269Sg6%299s1f9zMeB&password_repeat=H%2A%2BpWLKz%40_DQVt5%269Sg6%299s1f9zMeB&email=jenniferpierce%40example.net' http://localhost:8000/auth/register/
+[2026-11-16 18:59:04,394 - INFO] - Response status code='201', elapsed_time='0:00:00.238669'
+{
+  "detail": "User registered"
+}
+
+[2026-11-16 18:59:04,708 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 68' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=charles25&password=H%2A%2BpWLKz%40_DQVt5%269Sg6%299s1f9zMeB' http://localhost:8000/auth/login/
+[2026-11-16 18:59:04,708 - INFO] - Response status code='200', elapsed_time='0:00:00.273322'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiY2hhcmxlczI1IiwiZXhwIjoxNzk0ODYyNzQ0LCJpYXQiOjE3OTQ4NTU1NDR9.RHSGBrv7HFluZkO4c_HXGppzIeYkKzfhz0iwqcXH3aLXqYCPvLS76OXAe0vYPSkK4hsJDNIo6GCg_9gnBuBkGnVMf_OQvzLjReTrFcKsDyPe6PsMP9zzsSmg12t6mbOUYSHKTJhTOgKYc7eUiwxDhDFLOWuauoopRqqf0qOvUYxEU7ONAWP2atNE8VruZMUVUtq8rPZUu4NifyAVFZSqSsk4lasvGxAFBUgfu_iDkS4ovxku2Tu-KP0JXZAneRHsTfyhmaKZLJpocCfZ40dQ0iPgwECq1fHN2wFkSdhiKqn5aegJydxlLrnhahjweknb4U_hHbRQ6rB39wzgohYbuQ",
+  "token_type": "Bearer"
+}
+
+[2026-11-16 18:59:04,719 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiY2hhcmxlczI1IiwiZXhwIjoxNzk0ODYyNzQ0LCJpYXQiOjE3OTQ4NTU1NDR9.RHSGBrv7HFluZkO4c_HXGppzIeYkKzfhz0iwqcXH3aLXqYCPvLS76OXAe0vYPSkK4hsJDNIo6GCg_9gnBuBkGnVMf_OQvzLjReTrFcKsDyPe6PsMP9zzsSmg12t6mbOUYSHKTJhTOgKYc7eUiwxDhDFLOWuauoopRqqf0qOvUYxEU7ONAWP2atNE8VruZMUVUtq8rPZUu4NifyAVFZSqSsk4lasvGxAFBUgfu_iDkS4ovxku2Tu-KP0JXZAneRHsTfyhmaKZLJpocCfZ40dQ0iPgwECq1fHN2wFkSdhiKqn5aegJydxlLrnhahjweknb4U_hHbRQ6rB39wzgohYbuQ' -H 'Content-Length: 23' -H 'Content-Type: application/json' -d '{"name": "Emily Hogan"}' http://localhost:8001/groups/
+[2026-11-16 18:59:04,719 - INFO] - Response status code='201', elapsed_time='0:00:00.009280'
+{
+  "name": "Emily Hogan",
+  "id": 1
+}
+
