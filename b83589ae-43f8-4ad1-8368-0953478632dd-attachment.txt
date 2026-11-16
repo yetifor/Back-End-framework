@@ -1,0 +1,20 @@
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 146' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=qmiller&password=%25oA9YAlODD%285xTt8aPr%2BOE8fKBS9yg&password_repeat=%25oA9YAlODD%285xTt8aPr%2BOE8fKBS9yg&email=keithsmith%40example.com' http://localhost:8000/auth/register/
+INFO     Logger:logger.py:29 Response status code='201', elapsed_time='0:00:00.239071'
+{
+  "detail": "User registered"
+}
+
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 62' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=qmiller&password=%25oA9YAlODD%285xTt8aPr%2BOE8fKBS9yg' http://localhost:8000/auth/login/
+INFO     Logger:logger.py:29 Response status code='200', elapsed_time='0:00:00.273636'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6InFtaWxsZXIiLCJleHAiOjE3OTQ4NjExNzQsImlhdCI6MTc5NDg1Mzk3NH0.Nc2I1ElVQH7s-RMzi4BRlxAKx4VAKCNzb6K_9DHHVCblbH6N9mIBTjhxeBzzQLAKqDMHWIm8r83RINhp75nGaEBtXpv1GQskTaS2c-MgzlMmcTagQGbL4qcT1QNUlmaOLYLovnnK-TjpHvHPIbVjlPVbjB7OKKG0F3PfyytZzp6gxCFS1tIK0AJRzDiw3Gg7TVkxP_D_VSbrZtD8cIASLLWWhuXAQUq9UkkiSEJda0qvVKHbSWQ7FV6Zb-dlpkBRjIUj7XPZQwmGyStDCyAliyFkzDQQVRbssWoP9NUXOVXlMI2BdBh75_UCLX05dKS1tURx5_ZZcG7FfbISUEeXKg",
+  "token_type": "Bearer"
+}
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6InFtaWxsZXIiLCJleHAiOjE3OTQ4NjExNzQsImlhdCI6MTc5NDg1Mzk3NH0.Nc2I1ElVQH7s-RMzi4BRlxAKx4VAKCNzb6K_9DHHVCblbH6N9mIBTjhxeBzzQLAKqDMHWIm8r83RINhp75nGaEBtXpv1GQskTaS2c-MgzlMmcTagQGbL4qcT1QNUlmaOLYLovnnK-TjpHvHPIbVjlPVbjB7OKKG0F3PfyytZzp6gxCFS1tIK0AJRzDiw3Gg7TVkxP_D_VSbrZtD8cIASLLWWhuXAQUq9UkkiSEJda0qvVKHbSWQ7FV6Zb-dlpkBRjIUj7XPZQwmGyStDCyAliyFkzDQQVRbssWoP9NUXOVXlMI2BdBh75_UCLX05dKS1tURx5_ZZcG7FfbISUEeXKg' 'http://localhost:8001/grades/stats/?student_id=49517285'
+INFO     Logger:logger.py:29 Response status code='200', elapsed_time='0:00:00.008893'
+{
+  "count": 0,
+  "min": null,
+  "max": null,
+  "avg": null
+}
