@@ -1,0 +1,31 @@
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 144' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=reillymarie&password=z9WVUjpi%5E_SF_oCoUdPYkVW4g%29anff&password_repeat=z9WVUjpi%5E_SF_oCoUdPYkVW4g%29anff&email=thomas26%40example.com' http://localhost:8000/auth/register/
+INFO     Logger:logger.py:29 Response status code='201', elapsed_time='0:00:00.239134'
+{
+  "detail": "User registered"
+}
+
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 64' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=reillymarie&password=z9WVUjpi%5E_SF_oCoUdPYkVW4g%29anff' http://localhost:8000/auth/login/
+INFO     Logger:logger.py:29 Response status code='200', elapsed_time='0:00:00.273077'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE4LCJ1c2VybmFtZSI6InJlaWxseW1hcmllIiwiZXhwIjoxNzk0ODY0MzY5LCJpYXQiOjE3OTQ4NTcxNjl9.XXcrSeAupZpFg4bkpAqIOheZsIP9pOvZqXRW5Jr108vN9dFSIeLnplQJUtecP1F_fh4F9gEsvD0JrFbIAzy1Ga-w5juK-ayJbtzJlwUj0T-P8BYs4DikzD0g8_nJzqlW2yxqgokBxNsS2ugzT_XBuQj3WQbxi9sKT-DpuG7Bk6FqKV-9e4VqDZqV_5TMfM0Z8MudThzCQq-E_dFbDmey-UiwE9wyAAJYB-Eayitk8UlUtSEn1tL_NpypwYdNXSEG85DiEWxgpF_o_v3UITQCJ8LaSQgSQrz26pqRDjlr299aV5yY2j_FiG_BG-O5jTdTKTKwpiT-o1MH2dU0gbGoRA",
+  "token_type": "Bearer"
+}
+INFO     Logger:logger.py:29 ### Step 1. Create teacher
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE4LCJ1c2VybmFtZSI6InJlaWxseW1hcmllIiwiZXhwIjoxNzk0ODY0MzY5LCJpYXQiOjE3OTQ4NTcxNjl9.XXcrSeAupZpFg4bkpAqIOheZsIP9pOvZqXRW5Jr108vN9dFSIeLnplQJUtecP1F_fh4F9gEsvD0JrFbIAzy1Ga-w5juK-ayJbtzJlwUj0T-P8BYs4DikzD0g8_nJzqlW2yxqgokBxNsS2ugzT_XBuQj3WQbxi9sKT-DpuG7Bk6FqKV-9e4VqDZqV_5TMfM0Z8MudThzCQq-E_dFbDmey-UiwE9wyAAJYB-Eayitk8UlUtSEn1tL_NpypwYdNXSEG85DiEWxgpF_o_v3UITQCJ8LaSQgSQrz26pqRDjlr299aV5yY2j_FiG_BG-O5jTdTKTKwpiT-o1MH2dU0gbGoRA' -H 'Content-Length: 70' -H 'Content-Type: application/json' -d '{"first_name": "Mariah", "last_name": "Benjamin", "subject": "amount"}' http://localhost:8001/teachers/
+INFO     Logger:logger.py:29 Response status code='422', elapsed_time='0:00:00.006658'
+{
+  "detail": [
+    {
+      "type": "enum",
+      "loc": [
+        "body",
+        "subject"
+      ],
+      "msg": "Input should be 'Mathematics', 'Physics', 'History', 'Biology' or 'Geography'",
+      "input": "amount",
+      "ctx": {
+        "expected": "'Mathematics', 'Physics', 'History', 'Biology' or 'Geography'"
+      }
+    }
+  ]
+}
