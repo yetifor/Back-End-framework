@@ -1,0 +1,21 @@
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 153' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=walkerevan&password=%2149UTKbXt6FgKvk08LmX4%24WY26bKIx&password_repeat=%2149UTKbXt6FgKvk08LmX4%24WY26bKIx&email=christophershelton%40example.org' http://localhost:8000/auth/register/
+INFO     Logger:logger.py:29 Response status code='201', elapsed_time='0:00:00.276646'
+{
+  "detail": "User registered"
+}
+
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 63' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=walkerevan&password=%2149UTKbXt6FgKvk08LmX4%24WY26bKIx' http://localhost:8000/auth/login/
+INFO     Logger:logger.py:29 Response status code='200', elapsed_time='0:00:00.313799'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInVzZXJuYW1lIjoid2Fsa2VyZXZhbiIsImV4cCI6MTc5NDg2NTAxMywiaWF0IjoxNzk0ODU3ODEzfQ.UOQLz5zc0aSOLLFqhaYcNBWq79fEVsEwGWipFcrnzXX8F7Gt4L_kMVMVD4yaY5L-i2Z3HLFgn1DY7bsrOMnrD7s3V4_yTO7nuOcuoUeoHqEWjD47Z8qADI4f8Y0gwFmffJA9a7_QDCj7z8tr9imYppy-n0Ydr_4nNGJmzA8pRcrEpV9LUNFJdYjSKuY63pNqUjBiGBLUP1V_NvFjzgDoGPUby3PynpebjWXBhMt9ljfAzPjxwybU0cmP_-uvdPxMmxZI-nV0CdoqYC4URXcf5jZXZLXjDGVWLPZFvC-Ymm0beJw2ny7D2aSDl9Hmd9y4OLnYf8ifxwQJNeKe3IfitA",
+  "token_type": "Bearer"
+}
+INFO     Logger:logger.py:29 ### Step 1. Create teacher
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInVzZXJuYW1lIjoid2Fsa2VyZXZhbiIsImV4cCI6MTc5NDg2NTAxMywiaWF0IjoxNzk0ODU3ODEzfQ.UOQLz5zc0aSOLLFqhaYcNBWq79fEVsEwGWipFcrnzXX8F7Gt4L_kMVMVD4yaY5L-i2Z3HLFgn1DY7bsrOMnrD7s3V4_yTO7nuOcuoUeoHqEWjD47Z8qADI4f8Y0gwFmffJA9a7_QDCj7z8tr9imYppy-n0Ydr_4nNGJmzA8pRcrEpV9LUNFJdYjSKuY63pNqUjBiGBLUP1V_NvFjzgDoGPUby3PynpebjWXBhMt9ljfAzPjxwybU0cmP_-uvdPxMmxZI-nV0CdoqYC4URXcf5jZXZLXjDGVWLPZFvC-Ymm0beJw2ny7D2aSDl9Hmd9y4OLnYf8ifxwQJNeKe3IfitA' -H 'Content-Length: 70' -H 'Content-Type: application/json' -d '{"first_name": "Renee", "last_name": "Hall", "subject": "Mathematics"}' http://localhost:8001/teachers/
+INFO     Logger:logger.py:29 Response status code='201', elapsed_time='0:00:00.010874'
+{
+  "first_name": "Renee",
+  "last_name": "Hall",
+  "subject": "Mathematics",
+  "id": 1
+}
