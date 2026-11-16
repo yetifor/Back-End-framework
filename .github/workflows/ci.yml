@@ -10,7 +10,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Check out repository
         uses: actions/checkout@v4
       - name: Set up Python and Ruff
         uses: actions/setup-python@v7
@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [lint]
     steps:
-      - name: Checkout Code
+      - name: Check out repository
         uses: actions/checkout@v4
       - name: Create .env
         run: |
@@ -39,14 +39,48 @@ jobs:
           UNIVERSITY_SERVICE_API_URL=${{ vars.UNIVERSITY_SERVICE_API_URL }}
           EOF
 
-      - name: Biuld Docker Image
-        run: docker build -t CI-tests .
-      - name: Start service
-        run: docker compose up -d
+      - name: Start services
+        run: docker compose -p app up -d --wait
 
-  generate-report:
+      - name: Build image
+        run: docker build api-tests .
+
+      - name: Start tests
+        run: |
+          docker run --rm \
+          --network api_default \
+          --env-file .env \
+          -v ${{ github.workspace }}/allure_results:/app/allure_results \
+          api-tests
+
+      - name: Upload Allure results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results
+          path: allure_results
+
+
+  publish-report:
+    needs: [tests]
     runs-on: ubuntu-latest
-    needs: tests
-    name: generate report
+    permissions:
+      contents: write
+
     steps:
-      - name:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Download Allure results
+        uses: actions/download-artifact@v4
+        with:
+          name: allure-reports
+          path: allure-reports
+
+      - name: Deploy results to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-report
