@@ -42,7 +42,6 @@ jobs:
       - name: Start services
         run: |
           docker compose -p app up -d --wait
-          sleep 30
         
 
       - name: Build image
