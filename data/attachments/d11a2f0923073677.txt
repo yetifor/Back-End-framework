@@ -1,0 +1,26 @@
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 156' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=virginiathornton&password=IsJ05Ht3%23Xw5uB%2Ad5%2AFEqg%29a7w0zPy&password_repeat=IsJ05Ht3%23Xw5uB%2Ad5%2AFEqg%29a7w0zPy&email=fbrewer%40example.org' http://localhost:8000/auth/register/
+INFO     Logger:logger.py:29 Response status code='201', elapsed_time='0:00:00.273413'
+{
+  "detail": "User registered"
+}
+
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 73' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=virginiathornton&password=IsJ05Ht3%23Xw5uB%2Ad5%2AFEqg%29a7w0zPy' http://localhost:8000/auth/login/
+INFO     Logger:logger.py:29 Response status code='200', elapsed_time='0:00:00.313091'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUsInVzZXJuYW1lIjoidmlyZ2luaWF0aG9ybnRvbiIsImV4cCI6MTc5NTAyMjUxOSwiaWF0IjoxNzk1MDE1MzE5fQ.YotiOQQCyFckBa4aTQ22ZrfGCu_qtho18UCmWmPBPsV1A-hQHdJrh3r6FZQyUl6uDwJoxsGLjW-WHKqEbCuF-Ayw4wjNJe0SX1ySCHr8UQynFg92_PYJsd-IZ7VT6vV1v_zMa-fHQ0S__TTK5fd3gZ72ozbcR6i2kAhyebLv6wipTHXnuOtLptP8ySrcQ4JclKKViRTiC71hVcfBorGcVAIoJwbYRaLGJWvdYANfGygms6Zhk_-OVTR3a7TridzwUqQgikNbBSeew9JaFmCUFWotHI_g6GoGQE9CoEm2k-RlQNMODTm4Xl7mbIjzU-EcgWgIMyjleoBw-BBNiZCVAA",
+  "token_type": "Bearer"
+}
+INFO     Logger:logger.py:29 ### Step 1. Create Group
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUsInVzZXJuYW1lIjoidmlyZ2luaWF0aG9ybnRvbiIsImV4cCI6MTc5NTAyMjUxOSwiaWF0IjoxNzk1MDE1MzE5fQ.YotiOQQCyFckBa4aTQ22ZrfGCu_qtho18UCmWmPBPsV1A-hQHdJrh3r6FZQyUl6uDwJoxsGLjW-WHKqEbCuF-Ayw4wjNJe0SX1ySCHr8UQynFg92_PYJsd-IZ7VT6vV1v_zMa-fHQ0S__TTK5fd3gZ72ozbcR6i2kAhyebLv6wipTHXnuOtLptP8ySrcQ4JclKKViRTiC71hVcfBorGcVAIoJwbYRaLGJWvdYANfGygms6Zhk_-OVTR3a7TridzwUqQgikNbBSeew9JaFmCUFWotHI_g6GoGQE9CoEm2k-RlQNMODTm4Xl7mbIjzU-EcgWgIMyjleoBw-BBNiZCVAA' -H 'Content-Length: 21' -H 'Content-Type: application/json' -d '{"name": "Erin Reed"}' http://localhost:8001/groups/
+INFO     Logger:logger.py:29 Response status code='201', elapsed_time='0:00:00.011441'
+{
+  "name": "Erin Reed",
+  "id": 1
+}
+
+INFO     Logger:logger.py:29 ### Step 2. Delete Group
+INFO     Logger:logger.py:29 Request:curl -X DELETE -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUsInVzZXJuYW1lIjoidmlyZ2luaWF0aG9ybnRvbiIsImV4cCI6MTc5NTAyMjUxOSwiaWF0IjoxNzk1MDE1MzE5fQ.YotiOQQCyFckBa4aTQ22ZrfGCu_qtho18UCmWmPBPsV1A-hQHdJrh3r6FZQyUl6uDwJoxsGLjW-WHKqEbCuF-Ayw4wjNJe0SX1ySCHr8UQynFg92_PYJsd-IZ7VT6vV1v_zMa-fHQ0S__TTK5fd3gZ72ozbcR6i2kAhyebLv6wipTHXnuOtLptP8ySrcQ4JclKKViRTiC71hVcfBorGcVAIoJwbYRaLGJWvdYANfGygms6Zhk_-OVTR3a7TridzwUqQgikNbBSeew9JaFmCUFWotHI_g6GoGQE9CoEm2k-RlQNMODTm4Xl7mbIjzU-EcgWgIMyjleoBw-BBNiZCVAA' -H 'Content-Length: 0' http://localhost:8001/groups/1/
+INFO     Logger:logger.py:29 Response status code='200', elapsed_time='0:00:00.009217'
+{
+  "detail": "Group deleted"
+}
