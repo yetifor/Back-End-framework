@@ -1,0 +1,30 @@
+[2026-11-18 11:08:08,423 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 149' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=zrubio&password=FKZGwivD7M%21qcw%23bR_s%23fMDK%29W9%28wO&password_repeat=FKZGwivD7M%21qcw%23bR_s%23fMDK%29W9%28wO&email=jack81%40example.com' http://localhost:8000/auth/register/
+[2026-11-18 11:08:08,423 - INFO] - Response status code='201', elapsed_time='0:00:00.190797'
+{
+  "detail": "User registered"
+}
+
+[2026-11-18 11:08:08,679 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 65' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=zrubio&password=FKZGwivD7M%21qcw%23bR_s%23fMDK%29W9%28wO' http://localhost:8000/auth/login/
+[2026-11-18 11:08:08,679 - INFO] - Response status code='200', elapsed_time='0:00:00.215112'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE2LCJ1c2VybmFtZSI6InpydWJpbyIsImV4cCI6MTc5NTAwNzI4OCwiaWF0IjoxNzk1MDAwMDg4fQ.Oe6JE1kEzK8abt82U7FkWNsfXrBpQPKVjD_7PO6VPZ4eVSFeTEE3qUdnz1unoga0Gv5Defun1jlR-1h7XAtnwLsSWu4v-BT1pTraHf2Q42-ceXtMeH_x-OjXH88vsfEBkvJaYznA_cFkxURWDH63iYwf7_DUM4Rx2TgVVFTfnpUZLy9qYtwXCO-yK_7S_pXfcgaEm5sBw3zeBeMY3FXJ9WKUkM4mvfZ7nlhQz-k_03BqcnKC5z-nIuNryU86F4lTqZ_ffty1i7Ke3E53GKLHjKNlqSRcuArmVekF26jQ4w_sM1bR-N0KhC7yj_8vNUjMCGvrNBdZMwcWVXHsY_N-vw",
+  "token_type": "Bearer"
+}
+
+[2026-11-18 11:08:08,679 - INFO] - ### Step 1. Create Teacher ###
+[2026-11-18 11:08:08,693 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE2LCJ1c2VybmFtZSI6InpydWJpbyIsImV4cCI6MTc5NTAwNzI4OCwiaWF0IjoxNzk1MDAwMDg4fQ.Oe6JE1kEzK8abt82U7FkWNsfXrBpQPKVjD_7PO6VPZ4eVSFeTEE3qUdnz1unoga0Gv5Defun1jlR-1h7XAtnwLsSWu4v-BT1pTraHf2Q42-ceXtMeH_x-OjXH88vsfEBkvJaYznA_cFkxURWDH63iYwf7_DUM4Rx2TgVVFTfnpUZLy9qYtwXCO-yK_7S_pXfcgaEm5sBw3zeBeMY3FXJ9WKUkM4mvfZ7nlhQz-k_03BqcnKC5z-nIuNryU86F4lTqZ_ffty1i7Ke3E53GKLHjKNlqSRcuArmVekF26jQ4w_sM1bR-N0KhC7yj_8vNUjMCGvrNBdZMwcWVXHsY_N-vw' -H 'Content-Length: 69' -H 'Content-Type: application/json' -d '{"first_name": "Yolanda", "last_name": "David", "subject": "Physics"}' http://localhost:8001/teachers/
+[2026-11-18 11:08:08,693 - INFO] - Response status code='201', elapsed_time='0:00:00.012836'
+{
+  "first_name": "Yolanda",
+  "last_name": "David",
+  "subject": "Physics",
+  "id": 7
+}
+
+[2026-11-18 11:08:08,693 - INFO] - ### Step 2. Delete teacher
+[2026-11-18 11:08:08,739 - INFO] - Request:curl -X DELETE -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE2LCJ1c2VybmFtZSI6InpydWJpbyIsImV4cCI6MTc5NTAwNzI4OCwiaWF0IjoxNzk1MDAwMDg4fQ.Oe6JE1kEzK8abt82U7FkWNsfXrBpQPKVjD_7PO6VPZ4eVSFeTEE3qUdnz1unoga0Gv5Defun1jlR-1h7XAtnwLsSWu4v-BT1pTraHf2Q42-ceXtMeH_x-OjXH88vsfEBkvJaYznA_cFkxURWDH63iYwf7_DUM4Rx2TgVVFTfnpUZLy9qYtwXCO-yK_7S_pXfcgaEm5sBw3zeBeMY3FXJ9WKUkM4mvfZ7nlhQz-k_03BqcnKC5z-nIuNryU86F4lTqZ_ffty1i7Ke3E53GKLHjKNlqSRcuArmVekF26jQ4w_sM1bR-N0KhC7yj_8vNUjMCGvrNBdZMwcWVXHsY_N-vw' -H 'Content-Length: 0' http://localhost:8001/teachers/7/
+[2026-11-18 11:08:08,739 - INFO] - Response status code='200', elapsed_time='0:00:00.005390'
+{
+  "detail": "Teacher deleted"
+}
+

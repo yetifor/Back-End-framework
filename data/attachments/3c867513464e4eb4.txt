@@ -1,0 +1,22 @@
+[2026-11-18 11:07:51,574 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 156' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=jgolden&password=KG%2BsXuGsusE%245tZf2T2Go%26%24%2376%26T7U&password_repeat=KG%2BsXuGsusE%245tZf2T2Go%26%24%2376%26T7U&email=rramirez%40example.com' http://localhost:8000/auth/register/
+[2026-11-18 11:07:51,574 - INFO] - Response status code='201', elapsed_time='0:00:00.191073'
+{
+  "detail": "User registered"
+}
+
+[2026-11-18 11:07:51,831 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 68' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=jgolden&password=KG%2BsXuGsusE%245tZf2T2Go%26%24%2376%26T7U' http://localhost:8000/auth/login/
+[2026-11-18 11:07:51,831 - INFO] - Response status code='200', elapsed_time='0:00:00.216072'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwLCJ1c2VybmFtZSI6Impnb2xkZW4iLCJleHAiOjE3OTUwMDcyNzEsImlhdCI6MTc5NTAwMDA3MX0.k--biCjikN65DVsJCf81YYv7gnFTqbCihvd9n6J7K7DRGPlRvnq0q7oclVWYfB3Xmj49_wIAboI-C9uBtwa14xMZTXTO9vD6p2lMsK-C3FqLTrw7tSG4fqT-8S46pYerc3k_rBvEpLJTew5HYsPA4ZW9HwwxDw098VJdVpxAbKS4dkW5FKc2QslhyAT0vokFWCESW-ujqPaDKVHJrbHvhEIerrrF6bQq8_M6vY3ktD1QgtCMrEOIiDY1XZOYzpn5KyhkmN2xU-x49iKyGmX_pmiuZdzZl2Crft09TZ7CWnDEbepbRlPKfPhYI0wv6oSXvzaL2Ufet56fcH5W_DIJeA",
+  "token_type": "Bearer"
+}
+
+[2026-11-18 11:07:51,836 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwLCJ1c2VybmFtZSI6Impnb2xkZW4iLCJleHAiOjE3OTUwMDcyNzEsImlhdCI6MTc5NTAwMDA3MX0.k--biCjikN65DVsJCf81YYv7gnFTqbCihvd9n6J7K7DRGPlRvnq0q7oclVWYfB3Xmj49_wIAboI-C9uBtwa14xMZTXTO9vD6p2lMsK-C3FqLTrw7tSG4fqT-8S46pYerc3k_rBvEpLJTew5HYsPA4ZW9HwwxDw098VJdVpxAbKS4dkW5FKc2QslhyAT0vokFWCESW-ujqPaDKVHJrbHvhEIerrrF6bQq8_M6vY3ktD1QgtCMrEOIiDY1XZOYzpn5KyhkmN2xU-x49iKyGmX_pmiuZdzZl2Crft09TZ7CWnDEbepbRlPKfPhYI0wv6oSXvzaL2Ufet56fcH5W_DIJeA' 'http://localhost:8001/grades/stats/?teacher_id=79523367'
+[2026-11-18 11:07:51,836 - INFO] - Response status code='200', elapsed_time='0:00:00.004495'
+{
+  "count": 0,
+  "min": null,
+  "max": null,
+  "avg": null
+}
+
