@@ -1,0 +1,24 @@
+Таблица успешно  очищена!
+[2026-11-18 17:32:18,547 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 147' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=julia66&password=oAt6%2B8Wmz9NqnxRVP%214%28GX7sXUmXLm&password_repeat=oAt6%2B8Wmz9NqnxRVP%214%28GX7sXUmXLm&email=nicolelopez%40example.org' http://localhost:8000/auth/register/
+[2026-11-18 17:32:18,547 - INFO] - Response status code='201', elapsed_time='0:00:00.278391'
+{
+  "detail": "User registered"
+}
+
+[2026-11-18 17:32:18,907 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 62' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=julia66&password=oAt6%2B8Wmz9NqnxRVP%214%28GX7sXUmXLm' http://localhost:8000/auth/login/
+[2026-11-18 17:32:18,907 - INFO] - Response status code='200', elapsed_time='0:00:00.319303'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE1LCJ1c2VybmFtZSI6Imp1bGlhNjYiLCJleHAiOjE3OTUwMzAzMzgsImlhdCI6MTc5NTAyMzEzOH0.nx0zP5WIYNyeKFpg-75lspnmqQXFWQr6wCnJbgP6UJvfWs_ztrbgbBzsEt16Ol7nLgMT8CUFJWNnSmr8wg7V5E5lNkubZ95Ly8z2EgLZfCjELGifl8Sp3QfonTADL5r9YYbkbtmtI5QrZgtytz9LRhJnFZPQZezcfUHoVPsCkdTveHOJf6B9INFm7O1tGosxBYh5y2UoI3juL1RVxAv8jZj2_5CaoiDyJceolnYYeaGe2LCesKrEo7WsVx-_vai49DHR4J-sK2wu_XuYvT1o4FKSCPa1PQ6x3_oVZiakuh_cdUIsmMZ8AOSWwS4bDa-bxh4ksFwGTrElf15a9V25XQ",
+  "token_type": "Bearer"
+}
+
+[2026-11-18 17:32:18,908 - INFO] - ### Step 1. Create teacher
+[2026-11-18 17:32:18,920 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE1LCJ1c2VybmFtZSI6Imp1bGlhNjYiLCJleHAiOjE3OTUwMzAzMzgsImlhdCI6MTc5NTAyMzEzOH0.nx0zP5WIYNyeKFpg-75lspnmqQXFWQr6wCnJbgP6UJvfWs_ztrbgbBzsEt16Ol7nLgMT8CUFJWNnSmr8wg7V5E5lNkubZ95Ly8z2EgLZfCjELGifl8Sp3QfonTADL5r9YYbkbtmtI5QrZgtytz9LRhJnFZPQZezcfUHoVPsCkdTveHOJf6B9INFm7O1tGosxBYh5y2UoI3juL1RVxAv8jZj2_5CaoiDyJceolnYYeaGe2LCesKrEo7WsVx-_vai49DHR4J-sK2wu_XuYvT1o4FKSCPa1PQ6x3_oVZiakuh_cdUIsmMZ8AOSWwS4bDa-bxh4ksFwGTrElf15a9V25XQ' -H 'Content-Length: 71' -H 'Content-Type: application/json' -d '{"first_name": "Larry", "last_name": "Mejia", "subject": "Mathematics"}' http://localhost:8001/teachers/
+[2026-11-18 17:32:18,920 - INFO] - Response status code='201', elapsed_time='0:00:00.010296'
+{
+  "first_name": "Larry",
+  "last_name": "Mejia",
+  "subject": "Mathematics",
+  "id": 1
+}
+

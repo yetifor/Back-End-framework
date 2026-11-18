@@ -1,0 +1,23 @@
+Таблица успешно  очищена!
+[2026-11-18 17:31:59,083 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 156' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=aliciamurphy&password=k%29%2B%2A5dW3%264beqEavlPTAH_LIqHckNl&password_repeat=k%29%2B%2A5dW3%264beqEavlPTAH_LIqHckNl&email=palmereddie%40example.org' http://localhost:8000/auth/register/
+[2026-11-18 17:31:59,083 - INFO] - Response status code='201', elapsed_time='0:00:00.274516'
+{
+  "detail": "User registered"
+}
+
+[2026-11-18 17:31:59,439 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 69' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=aliciamurphy&password=k%29%2B%2A5dW3%264beqEavlPTAH_LIqHckNl' http://localhost:8000/auth/login/
+[2026-11-18 17:31:59,440 - INFO] - Response status code='200', elapsed_time='0:00:00.315061'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwLCJ1c2VybmFtZSI6ImFsaWNpYW11cnBoeSIsImV4cCI6MTc5NTAzMDMxOSwiaWF0IjoxNzk1MDIzMTE5fQ.hHKeg6rKma8WegGxS7r-g4ldLeJPWNHiLFiFPhUvF6PkqTtx1-ZGOxGHQQhx1CxBI8A7FpsZV03GlMsCEhP3ENVUIrj2TDwPjUDOj4FYSuSFc8_BL9Fo11Sv7ZQF4skUq6AcO0a2WanTO-xETtqitz15ZLjt_H5zcmt9WKY9ThkmLAAd2k6jl19SBAnoFIq-IPcNMFOSSckQv2fuC4P3h4gFDNeKDLDwMnfvtFqPGEBJHz6X7A2PgJ6JRSZBhfCk13hM_6WL6mHczT6AOETe0TmNU4IO7ZV3PpSWgSanDh1rlAJhTcayX127gW1Dhy4cJNhL4WHEXOHnLwtEa0s51A",
+  "token_type": "Bearer"
+}
+
+[2026-11-18 17:31:59,451 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwLCJ1c2VybmFtZSI6ImFsaWNpYW11cnBoeSIsImV4cCI6MTc5NTAzMDMxOSwiaWF0IjoxNzk1MDIzMTE5fQ.hHKeg6rKma8WegGxS7r-g4ldLeJPWNHiLFiFPhUvF6PkqTtx1-ZGOxGHQQhx1CxBI8A7FpsZV03GlMsCEhP3ENVUIrj2TDwPjUDOj4FYSuSFc8_BL9Fo11Sv7ZQF4skUq6AcO0a2WanTO-xETtqitz15ZLjt_H5zcmt9WKY9ThkmLAAd2k6jl19SBAnoFIq-IPcNMFOSSckQv2fuC4P3h4gFDNeKDLDwMnfvtFqPGEBJHz6X7A2PgJ6JRSZBhfCk13hM_6WL6mHczT6AOETe0TmNU4IO7ZV3PpSWgSanDh1rlAJhTcayX127gW1Dhy4cJNhL4WHEXOHnLwtEa0s51A' 'http://localhost:8001/grades/stats/?teacher_id=91640573'
+[2026-11-18 17:31:59,452 - INFO] - Response status code='200', elapsed_time='0:00:00.010496'
+{
+  "count": 0,
+  "min": null,
+  "max": null,
+  "avg": null
+}
+
