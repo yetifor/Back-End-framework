@@ -97,7 +97,7 @@ def create_student(university_api_utils_admin,create_group):
     student = university_service.create_student(student_request=student)
     return student
 
-@pytest.fixture(scope="session", autouse=False)
+@pytest.fixture(scope="function", autouse=True)
 def delete_database():
     try:
         conn = psycopg2.connect(
