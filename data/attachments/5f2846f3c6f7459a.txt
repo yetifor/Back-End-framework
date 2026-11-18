@@ -1,0 +1,21 @@
+Таблица успешно  очищена!
+[2026-11-18 17:10:51,445 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 145' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=kevin47&password=CVM%5EJp3bS%28zcR%28bNGX7gJ1dNFreNTT&password_repeat=CVM%5EJp3bS%28zcR%28bNGX7gJ1dNFreNTT&email=qthornton%40example.net' http://localhost:8000/auth/register/
+[2026-11-18 17:10:51,445 - INFO] - Response status code='201', elapsed_time='0:00:00.240737'
+{
+  "detail": "User registered"
+}
+
+[2026-11-18 17:10:51,766 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 62' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=kevin47&password=CVM%5EJp3bS%28zcR%28bNGX7gJ1dNFreNTT' http://localhost:8000/auth/login/
+[2026-11-18 17:10:51,766 - INFO] - Response status code='200', elapsed_time='0:00:00.279816'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoia2V2aW40NyIsImV4cCI6MTc5NTAyOTA1MSwiaWF0IjoxNzk1MDIxODUxfQ.cP5po48d7aj7gDMAuFEqbtN5alFxoCU_j_6590tmBl5RvCQUsRAn4TOGkBrrLII3YLUJNFZKQVfg8_opGbWUcgDDoeRBUcZQTg6xzIkSVSBEoPUmc-c_zMS7SCYQphXJAI9C6fCjd6trbSwvaJbtHUKf6JVjN0pCdmIat-lZJUsDfwrbqddSIYfHDPOc6gG0uaJgFCA28zfSYNQ72GCtHtdvkLHYPrAUuPvBtkuCffZdCXGyUT9xMutax6BMyl4zRFZBjjGujYHrSBScvJgd_QvZhSt0Fkn1-ur_64r2FrjoOsnGjwEcWAaBBmuQgBfPNIqzS7RlRpfB91Ywx1deIg",
+  "token_type": "Bearer"
+}
+
+[2026-11-18 17:10:51,780 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoia2V2aW40NyIsImV4cCI6MTc5NTAyOTA1MSwiaWF0IjoxNzk1MDIxODUxfQ.cP5po48d7aj7gDMAuFEqbtN5alFxoCU_j_6590tmBl5RvCQUsRAn4TOGkBrrLII3YLUJNFZKQVfg8_opGbWUcgDDoeRBUcZQTg6xzIkSVSBEoPUmc-c_zMS7SCYQphXJAI9C6fCjd6trbSwvaJbtHUKf6JVjN0pCdmIat-lZJUsDfwrbqddSIYfHDPOc6gG0uaJgFCA28zfSYNQ72GCtHtdvkLHYPrAUuPvBtkuCffZdCXGyUT9xMutax6BMyl4zRFZBjjGujYHrSBScvJgd_QvZhSt0Fkn1-ur_64r2FrjoOsnGjwEcWAaBBmuQgBfPNIqzS7RlRpfB91Ywx1deIg' -H 'Content-Length: 24' -H 'Content-Type: application/json' -d '{"name": "Donald Burke"}' http://localhost:8001/groups/
+[2026-11-18 17:10:51,780 - INFO] - Response status code='201', elapsed_time='0:00:00.011767'
+{
+  "name": "Donald Burke",
+  "id": 1
+}
+
