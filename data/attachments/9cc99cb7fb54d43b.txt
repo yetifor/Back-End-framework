@@ -1,0 +1,20 @@
+[2026-11-18 11:05:24,675 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 151' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=katrinaedwards&password=L%26cuLkmKQDzJ0Swr4UwB%2Azwm8LkV8n&password_repeat=L%26cuLkmKQDzJ0Swr4UwB%2Azwm8LkV8n&email=parkerpamela%40example.org' http://localhost:8000/auth/register/
+[2026-11-18 11:05:24,675 - INFO] - Response status code='201', elapsed_time='0:00:00.191682'
+{
+  "detail": "User registered"
+}
+
+[2026-11-18 11:05:24,958 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 67' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=katrinaedwards&password=L%26cuLkmKQDzJ0Swr4UwB%2Azwm8LkV8n' http://localhost:8000/auth/login/
+[2026-11-18 11:05:24,958 - INFO] - Response status code='200', elapsed_time='0:00:00.241868'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoia2F0cmluYWVkd2FyZHMiLCJleHAiOjE3OTUwMDcxMjQsImlhdCI6MTc5NDk5OTkyNH0.MZbizWS1QEdPtJHoMj4R0j4Am8YblbJy-dvJ_qDHbbPm_z5lWg5sgcz2t3b0JNx5b_n-i4pCc-_In9JaI-0FIQNaVeC0yvjlOlaI1rB2rCqsLkieNRw-_KzjkC4vkVhBOAapInfXdkDiQXH7R02Zl2pa24cGG4T4IW0IkDkRTNivn-koXqHcY9dnD73V0wK47MAiJ40zAWqlgVzcoq-zOyx5EAWsIAWIZFvSbcB0uoLm0Afu1ZEFkGFfeZSxCddJqdKvei1fM-M9LLrhMkqPeN5SRGsGU3RA0BqwRcLWAXCDeGupPWDcWxeqNE5lDh50Olk_h4PzOamTpqy-r1AvoA",
+  "token_type": "Bearer"
+}
+
+[2026-11-18 11:05:24,968 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoia2F0cmluYWVkd2FyZHMiLCJleHAiOjE3OTUwMDcxMjQsImlhdCI6MTc5NDk5OTkyNH0.MZbizWS1QEdPtJHoMj4R0j4Am8YblbJy-dvJ_qDHbbPm_z5lWg5sgcz2t3b0JNx5b_n-i4pCc-_In9JaI-0FIQNaVeC0yvjlOlaI1rB2rCqsLkieNRw-_KzjkC4vkVhBOAapInfXdkDiQXH7R02Zl2pa24cGG4T4IW0IkDkRTNivn-koXqHcY9dnD73V0wK47MAiJ40zAWqlgVzcoq-zOyx5EAWsIAWIZFvSbcB0uoLm0Afu1ZEFkGFfeZSxCddJqdKvei1fM-M9LLrhMkqPeN5SRGsGU3RA0BqwRcLWAXCDeGupPWDcWxeqNE5lDh50Olk_h4PzOamTpqy-r1AvoA' -H 'Content-Length: 23' -H 'Content-Type: application/json' -d '{"name": "Tracy Colon"}' http://localhost:8001/groups/
+[2026-11-18 11:05:24,968 - INFO] - Response status code='201', elapsed_time='0:00:00.008656'
+{
+  "name": "Tracy Colon",
+  "id": 1
+}
+
