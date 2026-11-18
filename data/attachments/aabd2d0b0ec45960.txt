@@ -1,0 +1,21 @@
+Таблица успешно  очищена!
+[2026-11-18 17:39:39,132 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 176' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=christophertaylor&password=%5E%26%5ER8Dz%25ZPJiis%5E%25O_5W%29tXFsPDtV8&password_repeat=%5E%26%5ER8Dz%25ZPJiis%5E%25O_5W%29tXFsPDtV8&email=katherinekelly%40example.org' http://localhost:8000/auth/register/
+[2026-11-18 17:39:39,132 - INFO] - Response status code='201', elapsed_time='0:00:00.239362'
+{
+  "detail": "User registered"
+}
+
+[2026-11-18 17:39:39,446 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 80' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=christophertaylor&password=%5E%26%5ER8Dz%25ZPJiis%5E%25O_5W%29tXFsPDtV8' http://localhost:8000/auth/login/
+[2026-11-18 17:39:39,446 - INFO] - Response status code='200', elapsed_time='0:00:00.273496'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiY2hyaXN0b3BoZXJ0YXlsb3IiLCJleHAiOjE3OTUwMzA3NzksImlhdCI6MTc5NTAyMzU3OX0.coPpTNkPpRqCl4HJdP8HAYdp_QE3tpZDd7Hslg91cZ0EzVNQ470XBspAVd2mysLl9xuRxWYJnhcizuKF0ccthvElI-b0ed57LxkSNbPscmx4qxDLwpIG3FKZjflrImxOrUWUCSiiCo5B5Wy_l_sP9dJYG3iEt9g2HDLL46O2q6dllKdfwp5tBkvgThQAN2Cu4tpKdDe4yUJZKmcYLhLbkKTjgUsb91tPPqYGaXhdhk1_jx8w0Xnrw7QRpWQz7GXnNCkWdmfQ7-tTcbHbDR2YjPGIXRCgo-zRlaV2StTply67DvePs__NT38xJB5zR9IpAqHcyqei8o8e7OsJVvWOTg",
+  "token_type": "Bearer"
+}
+
+[2026-11-18 17:39:39,457 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiY2hyaXN0b3BoZXJ0YXlsb3IiLCJleHAiOjE3OTUwMzA3NzksImlhdCI6MTc5NTAyMzU3OX0.coPpTNkPpRqCl4HJdP8HAYdp_QE3tpZDd7Hslg91cZ0EzVNQ470XBspAVd2mysLl9xuRxWYJnhcizuKF0ccthvElI-b0ed57LxkSNbPscmx4qxDLwpIG3FKZjflrImxOrUWUCSiiCo5B5Wy_l_sP9dJYG3iEt9g2HDLL46O2q6dllKdfwp5tBkvgThQAN2Cu4tpKdDe4yUJZKmcYLhLbkKTjgUsb91tPPqYGaXhdhk1_jx8w0Xnrw7QRpWQz7GXnNCkWdmfQ7-tTcbHbDR2YjPGIXRCgo-zRlaV2StTply67DvePs__NT38xJB5zR9IpAqHcyqei8o8e7OsJVvWOTg' -H 'Content-Length: 27' -H 'Content-Type: application/json' -d '{"name": "Danielle Warren"}' http://localhost:8001/groups/
+[2026-11-18 17:39:39,457 - INFO] - Response status code='201', elapsed_time='0:00:00.009291'
+{
+  "name": "Danielle Warren",
+  "id": 1
+}
+

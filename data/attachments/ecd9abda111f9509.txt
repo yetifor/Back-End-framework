@@ -1,0 +1,23 @@
+Таблица успешно  очищена!
+[2026-11-18 17:39:43,532 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 158' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=brian35&password=PfNNt74T0_f%2BU%40iaL%2B%28V%5ER3WLg%25%24Pp&password_repeat=PfNNt74T0_f%2BU%40iaL%2B%28V%5ER3WLg%25%24Pp&email=wvelez%40example.com' http://localhost:8000/auth/register/
+[2026-11-18 17:39:43,532 - INFO] - Response status code='201', elapsed_time='0:00:00.240048'
+{
+  "detail": "User registered"
+}
+
+[2026-11-18 17:39:43,846 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 70' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=brian35&password=PfNNt74T0_f%2BU%40iaL%2B%28V%5ER3WLg%25%24Pp' http://localhost:8000/auth/login/
+[2026-11-18 17:39:43,846 - INFO] - Response status code='200', elapsed_time='0:00:00.273406'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6ImJyaWFuMzUiLCJleHAiOjE3OTUwMzA3ODMsImlhdCI6MTc5NTAyMzU4M30.lXpCik6A4AOXEGXuT93km6l-GXdRclG4cl95m-I7ylQUcNHHYHU2G5NCGVLlXsrd0VF2NJQI-ORqX_JJ76921j-oSJxzqjNOhF0Xd-G7A50OmzVt9gbvQy3hD9ZUr-nxwtKZFGQoZV0w-AUzMN9CjIhUzfcpSg3y6JMkUtsLZhAZw9FXO2oc5ZMi-rsKO80wc9hfIwWIZgqjE2GufhAqnZV08svTqJBfch4pIXrgbjyzGk8qqGCFsSf4-xexEfcxBUhqrVvCjIfnEKWQGwc4ZEOkQOGk7me0blhjGY8LKlg-5m13Bw2xwTsI6nXcaB6h-iGZrqvHQ2FCuSDknU254w",
+  "token_type": "Bearer"
+}
+
+[2026-11-18 17:39:43,856 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6ImJyaWFuMzUiLCJleHAiOjE3OTUwMzA3ODMsImlhdCI6MTc5NTAyMzU4M30.lXpCik6A4AOXEGXuT93km6l-GXdRclG4cl95m-I7ylQUcNHHYHU2G5NCGVLlXsrd0VF2NJQI-ORqX_JJ76921j-oSJxzqjNOhF0Xd-G7A50OmzVt9gbvQy3hD9ZUr-nxwtKZFGQoZV0w-AUzMN9CjIhUzfcpSg3y6JMkUtsLZhAZw9FXO2oc5ZMi-rsKO80wc9hfIwWIZgqjE2GufhAqnZV08svTqJBfch4pIXrgbjyzGk8qqGCFsSf4-xexEfcxBUhqrVvCjIfnEKWQGwc4ZEOkQOGk7me0blhjGY8LKlg-5m13Bw2xwTsI6nXcaB6h-iGZrqvHQ2FCuSDknU254w' 'http://localhost:8001/grades/stats/?student_id=2444517'
+[2026-11-18 17:39:43,856 - INFO] - Response status code='200', elapsed_time='0:00:00.008565'
+{
+  "count": 0,
+  "min": null,
+  "max": null,
+  "avg": null
+}
+
