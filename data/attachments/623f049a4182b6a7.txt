@@ -1,0 +1,21 @@
+Таблица успешно  очищена!
+[2026-11-18 15:28:31,258 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 169' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=martindavid&password=%5E20QMB%24LOV7%25iR%28SYo%2Bm_fpt%2A3%29%40WH&password_repeat=%5E20QMB%24LOV7%25iR%28SYo%2Bm_fpt%2A3%29%40WH&email=micheal43%40example.com' http://localhost:8000/auth/register/
+[2026-11-18 15:28:31,258 - INFO] - Response status code='201', elapsed_time='0:00:00.307921'
+{
+  "detail": "User registered"
+}
+
+[2026-11-18 15:28:31,653 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 76' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=martindavid&password=%5E20QMB%24LOV7%25iR%28SYo%2Bm_fpt%2A3%29%40WH' http://localhost:8000/auth/login/
+[2026-11-18 15:28:31,653 - INFO] - Response status code='200', elapsed_time='0:00:00.353245'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoibWFydGluZGF2aWQiLCJleHAiOjE3OTUwMjI5MTEsImlhdCI6MTc5NTAxNTcxMX0.ETCfb5PlbPINmAvupv2PYVeFIjedzmL7jiVp3DQPfezYT4rTbuKevuenNu5ole5WpPuTi50Nwadb8OsSp59sG3DzXhp58YjjbqICdC6gIbKKI_W1l3la3MsJYbBSewc-Y0aQWRkYWHsic6MGEwf3WroiAXFhgU0rrbh4ILJKGZkRtX9UCuQTTxXz6MZn9HZnnXbAj3S_hlw1vlN4JturCjsC8Cl9zZWnRFIn1fkZ94mvt526BpuDRgRSq4_6s95sN4gtj4yC_zUiF3ZpZN2fxaeF7yqqXhbpScAht8zoXvMrqUJQ_SOOtiHArgwXTAft2UWELEEv1v-lJ2TqDtoHHg",
+  "token_type": "Bearer"
+}
+
+[2026-11-18 15:28:31,666 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoibWFydGluZGF2aWQiLCJleHAiOjE3OTUwMjI5MTEsImlhdCI6MTc5NTAxNTcxMX0.ETCfb5PlbPINmAvupv2PYVeFIjedzmL7jiVp3DQPfezYT4rTbuKevuenNu5ole5WpPuTi50Nwadb8OsSp59sG3DzXhp58YjjbqICdC6gIbKKI_W1l3la3MsJYbBSewc-Y0aQWRkYWHsic6MGEwf3WroiAXFhgU0rrbh4ILJKGZkRtX9UCuQTTxXz6MZn9HZnnXbAj3S_hlw1vlN4JturCjsC8Cl9zZWnRFIn1fkZ94mvt526BpuDRgRSq4_6s95sN4gtj4yC_zUiF3ZpZN2fxaeF7yqqXhbpScAht8zoXvMrqUJQ_SOOtiHArgwXTAft2UWELEEv1v-lJ2TqDtoHHg' -H 'Content-Length: 29' -H 'Content-Type: application/json' -d '{"name": "Mr. Matthew Burke"}' http://localhost:8001/groups/
+[2026-11-18 15:28:31,666 - INFO] - Response status code='201', elapsed_time='0:00:00.011123'
+{
+  "name": "Mr. Matthew Burke",
+  "id": 1
+}
+

@@ -1,0 +1,23 @@
+Таблица успешно  очищена!
+[2026-11-18 15:28:35,994 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 148' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=thomas29&password=rd%28ILxWx%5EPJ6YuTKo%2AIsdoU71%2Ay10g&password_repeat=rd%28ILxWx%5EPJ6YuTKo%2AIsdoU71%2Ay10g&email=ograham%40example.net' http://localhost:8000/auth/register/
+[2026-11-18 15:28:35,995 - INFO] - Response status code='201', elapsed_time='0:00:00.307815'
+{
+  "detail": "User registered"
+}
+
+[2026-11-18 15:28:36,389 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 65' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=thomas29&password=rd%28ILxWx%5EPJ6YuTKo%2AIsdoU71%2Ay10g' http://localhost:8000/auth/login/
+[2026-11-18 15:28:36,389 - INFO] - Response status code='200', elapsed_time='0:00:00.353210'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwLCJ1c2VybmFtZSI6InRob21hczI5IiwiZXhwIjoxNzk1MDIyOTE2LCJpYXQiOjE3OTUwMTU3MTZ9.crFZ6qO6J20Ze1y_iFxyWG7L_UHLFv7PLQ1cm1gc-9ns_lmFfs7mSZIicxAiGt1e7Ij7Q1LNyyKs25zOLLtE5mMtHUhIvb1zxjxTZdSBPuz-8qPi0YidjnRl5YO68diPEkRwxk-37jbwC7bsy9m5JuRXbr9RqD7qx-J0LAggPVlI6783gEvPP9rZvl3llfBJGYpc80HDruxepvlBm5V4LaOJX8jHNe5OV5YL648P4J5ab7LmCMV8vUTIN3jDaFw8UFIjlxfYUM-PLb70yymSY75dHWwcHLa49DmQIPUbEqAzC89bzsWqke7B8lXiI5541irrQrzBnvuhsfq3K0I6Mg",
+  "token_type": "Bearer"
+}
+
+[2026-11-18 15:28:36,399 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwLCJ1c2VybmFtZSI6InRob21hczI5IiwiZXhwIjoxNzk1MDIyOTE2LCJpYXQiOjE3OTUwMTU3MTZ9.crFZ6qO6J20Ze1y_iFxyWG7L_UHLFv7PLQ1cm1gc-9ns_lmFfs7mSZIicxAiGt1e7Ij7Q1LNyyKs25zOLLtE5mMtHUhIvb1zxjxTZdSBPuz-8qPi0YidjnRl5YO68diPEkRwxk-37jbwC7bsy9m5JuRXbr9RqD7qx-J0LAggPVlI6783gEvPP9rZvl3llfBJGYpc80HDruxepvlBm5V4LaOJX8jHNe5OV5YL648P4J5ab7LmCMV8vUTIN3jDaFw8UFIjlxfYUM-PLb70yymSY75dHWwcHLa49DmQIPUbEqAzC89bzsWqke7B8lXiI5541irrQrzBnvuhsfq3K0I6Mg' 'http://localhost:8001/grades/stats/?teacher_id=64569422'
+[2026-11-18 15:28:36,400 - INFO] - Response status code='200', elapsed_time='0:00:00.009163'
+{
+  "count": 0,
+  "min": null,
+  "max": null,
+  "avg": null
+}
+

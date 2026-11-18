@@ -1,0 +1,33 @@
+Таблица успешно  очищена!
+[2026-11-18 15:28:35,216 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 154' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=kelly65&password=F0FM850vy1OfWP3Q%29b%25mvKTvw%5EY%23b8&password_repeat=F0FM850vy1OfWP3Q%29b%25mvKTvw%5EY%23b8&email=gonzalesarthur%40example.net' http://localhost:8000/auth/register/
+[2026-11-18 15:28:35,216 - INFO] - Response status code='201', elapsed_time='0:00:00.307599'
+{
+  "detail": "User registered"
+}
+
+[2026-11-18 15:28:35,609 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 64' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=kelly65&password=F0FM850vy1OfWP3Q%29b%25mvKTvw%5EY%23b8' http://localhost:8000/auth/login/
+[2026-11-18 15:28:35,609 - INFO] - Response status code='200', elapsed_time='0:00:00.352749'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjksInVzZXJuYW1lIjoia2VsbHk2NSIsImV4cCI6MTc5NTAyMjkxNSwiaWF0IjoxNzk1MDE1NzE1fQ.eQckKnwzISlMsBafbY62IJy7kWZc6lqQ5brCGulepl061lfjI4bT19h0wHVaxkTHB4XSO0uYXJAMDYEmrBk-TSsVUh0L1p9qmFXNLr_voYK1qgEGQ9f57ZJOtJAeEcu_HFLHStReCQit2HFHGaL5JcyKQ2He6YxEh_99SZnyaSwCBOwX_E3Ud7W9yNerdIt1hVUJTjvU-gEGJ2xi6Upe_vZb3mhfMcU8VWKMAs3TmUspqBFx_FRqLMvqtg3uIt3HJP-g1deoSKptKKBwcJ-m3_o7z_30WUbMHr6mk7_E2eXxZlV9clMPloBZJlzIvmfkx6Ku6cY_wmYTp19OSCCFPw",
+  "token_type": "Bearer"
+}
+
+[2026-11-18 15:28:35,610 - INFO] - ### Step 1. Create Teacher ###
+[2026-11-18 15:28:35,621 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjksInVzZXJuYW1lIjoia2VsbHk2NSIsImV4cCI6MTc5NTAyMjkxNSwiaWF0IjoxNzk1MDE1NzE1fQ.eQckKnwzISlMsBafbY62IJy7kWZc6lqQ5brCGulepl061lfjI4bT19h0wHVaxkTHB4XSO0uYXJAMDYEmrBk-TSsVUh0L1p9qmFXNLr_voYK1qgEGQ9f57ZJOtJAeEcu_HFLHStReCQit2HFHGaL5JcyKQ2He6YxEh_99SZnyaSwCBOwX_E3Ud7W9yNerdIt1hVUJTjvU-gEGJ2xi6Upe_vZb3mhfMcU8VWKMAs3TmUspqBFx_FRqLMvqtg3uIt3HJP-g1deoSKptKKBwcJ-m3_o7z_30WUbMHr6mk7_E2eXxZlV9clMPloBZJlzIvmfkx6Ku6cY_wmYTp19OSCCFPw' -H 'Content-Length: 67' -H 'Content-Type: application/json' -d '{"first_name": "Angela", "last_name": "Hart", "subject": "History"}' http://localhost:8001/teachers/
+[2026-11-18 15:28:35,621 - INFO] - Response status code='201', elapsed_time='0:00:00.010475'
+{
+  "first_name": "Angela",
+  "last_name": "Hart",
+  "subject": "History",
+  "id": 1
+}
+
+[2026-11-18 15:28:35,670 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjksInVzZXJuYW1lIjoia2VsbHk2NSIsImV4cCI6MTc5NTAyMjkxNSwiaWF0IjoxNzk1MDE1NzE1fQ.eQckKnwzISlMsBafbY62IJy7kWZc6lqQ5brCGulepl061lfjI4bT19h0wHVaxkTHB4XSO0uYXJAMDYEmrBk-TSsVUh0L1p9qmFXNLr_voYK1qgEGQ9f57ZJOtJAeEcu_HFLHStReCQit2HFHGaL5JcyKQ2He6YxEh_99SZnyaSwCBOwX_E3Ud7W9yNerdIt1hVUJTjvU-gEGJ2xi6Upe_vZb3mhfMcU8VWKMAs3TmUspqBFx_FRqLMvqtg3uIt3HJP-g1deoSKptKKBwcJ-m3_o7z_30WUbMHr6mk7_E2eXxZlV9clMPloBZJlzIvmfkx6Ku6cY_wmYTp19OSCCFPw' 'http://localhost:8001/grades/stats/?teacher_id=1'
+[2026-11-18 15:28:35,670 - INFO] - Response status code='200', elapsed_time='0:00:00.007257'
+{
+  "count": 0,
+  "min": null,
+  "max": null,
+  "avg": null
+}
+
