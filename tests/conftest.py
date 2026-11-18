@@ -1,7 +1,8 @@
 import random
-
+import time
 import psycopg2
 import pytest
+import requests
 from faker import Faker
 
 from logger.logger import Logger
@@ -64,6 +65,7 @@ def university_api_utils_admin(access_token):
                          headers={"Authorization": f"Bearer {access_token}"})
     return api_utils
 
+
 @pytest.fixture(scope='function', autouse=False)
 def create_group(university_api_utils_admin):
     Logger.info("### Factory. Create  group ###")
@@ -72,19 +74,21 @@ def create_group(university_api_utils_admin):
     group = university_service.create_group(group_request=group_request)
     return group
 
+
 @pytest.fixture(scope='function', autouse=False)
 def create_teacher(university_api_utils_admin):
     Logger.info("### Factory. Create  teacher ###")
     university_service = UniversityService(api_utils=university_api_utils_admin)
     teacher = TeacherRequest(first_name=faker.first_name(),
-                                   last_name=faker.last_name(),
-                                   subject=random.choice([option for option in
-                                                          SubjectEnum]))
+                             last_name=faker.last_name(),
+                             subject=random.choice([option for option in
+                                                    SubjectEnum]))
     teacher = university_service.create_teacher(teacher_request=teacher)
     return teacher
 
+
 @pytest.fixture(scope='function', autouse=False)
-def create_student(university_api_utils_admin,create_group):
+def create_student(university_api_utils_admin, create_group):
     Logger.info("### Factory. Create  Student ###")
     university_service = UniversityService(api_utils=university_api_utils_admin)
     student = StudentRequest(first_name=faker.first_name(),
@@ -96,6 +100,7 @@ def create_student(university_api_utils_admin,create_group):
                              group_id=create_group.id)
     student = university_service.create_student(student_request=student)
     return student
+
 
 @pytest.fixture(scope="function", autouse=True)
 def delete_database():
@@ -114,11 +119,31 @@ def delete_database():
         conn.commit()
         print("Таблица успешно  очищена!")
 
-    except Exception as error: # noqa: BLE001
+    except Exception as error:  # noqa: BLE001
         print(f"Ошибка: {error}")
     finally:
         if conn:
             cursor.close()
             conn.close()
+
+
+@pytest.fixture(scope='session', autouse=True)
+def wait_for_services():
+    services = [f'{AuthService.SERVICE_URL}/docs',
+                f'{UniversityService.SERVICE_URL}/docs']
+    timeot = 180
+    start = time.time()
+
+    for url in services:
+        while time.time() - start < timeot:
+            try:
+                response = requests.get(url, timeout=5)
+                response.raise_for_status()
+            except requests.exceptions.RequestException:
+                time.sleep(1)
+            else:
+                break
+        else:
+            raise TimeoutError(f'Services not available after {timeot} seconds')
 
 
