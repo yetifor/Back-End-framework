@@ -1,5 +1,6 @@
 import random
 import time
+
 import psycopg2
 import pytest
 import requests
@@ -145,5 +146,3 @@ def wait_for_services():
                 break
         else:
             raise TimeoutError(f'Services not available after {timeot} seconds')
-
-
