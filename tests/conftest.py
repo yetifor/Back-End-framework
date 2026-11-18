@@ -112,7 +112,7 @@ def delete_database():
         cursor.execute("TRUNCATE TABLE teachers, groups, students, grades RESTART IDENTITY CASCADE;")
 
         conn.commit()
-        print("Таблица успешно очищена!")
+        print("Таблица успешно  очищена!")
 
     except Exception as error: # noqa: BLE001
         print(f"Ошибка: {error}")
