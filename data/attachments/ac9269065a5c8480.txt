@@ -1,0 +1,26 @@
+[2026-11-18 11:18:07,085 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 161' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=camachorussell&password=1C%2AFlaKL64ME%26_5%238_f%29VcJpM%26m%2A2f&password_repeat=1C%2AFlaKL64ME%26_5%238_f%29VcJpM%26m%2A2f&email=csmith%40example.org' http://localhost:8000/auth/register/
+[2026-11-18 11:18:07,085 - INFO] - Response status code='201', elapsed_time='0:00:00.308632'
+{
+  "detail": "User registered"
+}
+
+[2026-11-18 11:18:07,480 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 75' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=camachorussell&password=1C%2AFlaKL64ME%26_5%238_f%29VcJpM%26m%2A2f' http://localhost:8000/auth/login/
+[2026-11-18 11:18:07,480 - INFO] - Response status code='200', elapsed_time='0:00:00.354376'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE0LCJ1c2VybmFtZSI6ImNhbWFjaG9ydXNzZWxsIiwiZXhwIjoxNzk1MDA3ODg3LCJpYXQiOjE3OTUwMDA2ODd9.T6yP_K5UCrNCI9J-0ucldn6hkxkhIW-lYt6pDQhOiaH-L0Xftl6rrG3PjVEzKyejhsZb6Bt0wNyEHK71nSqulg-Ct2VQb72ev0MT1AhJB3d42g2xhcUl1x2Urv7e7P1GG9DQhZJB9xHNqCoi2k2Ny2byaWYMvgW9wTZJaP6jVyU6UqGpulKOZwMOkSPI6wvNqV00g9_qIYAKRi189aS79N2lIXpTZ0K27vOe4GPNS1wjgkgDw1rJWIKp3jOsGSAoYNXNsA2uJRWsiKH-1eqfdGFS4I7SsK3LB9azhZoSRD_n9ZnfOv69XJVJCmHtwV9nhWx0CmKuK0JDK56MHPLOFA",
+  "token_type": "Bearer"
+}
+
+[2026-11-18 11:18:07,481 - INFO] - ### Step 1: Create student
+[2026-11-18 11:18:07,494 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE0LCJ1c2VybmFtZSI6ImNhbWFjaG9ydXNzZWxsIiwiZXhwIjoxNzk1MDA3ODg3LCJpYXQiOjE3OTUwMDA2ODd9.T6yP_K5UCrNCI9J-0ucldn6hkxkhIW-lYt6pDQhOiaH-L0Xftl6rrG3PjVEzKyejhsZb6Bt0wNyEHK71nSqulg-Ct2VQb72ev0MT1AhJB3d42g2xhcUl1x2Urv7e7P1GG9DQhZJB9xHNqCoi2k2Ny2byaWYMvgW9wTZJaP6jVyU6UqGpulKOZwMOkSPI6wvNqV00g9_qIYAKRi189aS79N2lIXpTZ0K27vOe4GPNS1wjgkgDw1rJWIKp3jOsGSAoYNXNsA2uJRWsiKH-1eqfdGFS4I7SsK3LB9azhZoSRD_n9ZnfOv69XJVJCmHtwV9nhWx0CmKuK0JDK56MHPLOFA' -H 'Content-Length: 137' -H 'Content-Type: application/json' -d '{"first_name": "Brian", "last_name": "Moore", "email": "bobby74@example.net", "degree": "Master", "phone": "+74025745114", "group_id": 1}' http://localhost:8001/students/
+[2026-11-18 11:18:07,494 - INFO] - Response status code='201', elapsed_time='0:00:00.011923'
+{
+  "first_name": "Brian",
+  "last_name": "Moore",
+  "email": "bobby74@example.net",
+  "degree": "Master",
+  "phone": "+74025745114",
+  "group_id": 1,
+  "id": 4
+}
+
