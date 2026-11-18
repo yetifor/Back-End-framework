@@ -1,0 +1,21 @@
+Таблица успешно  очищена!
+[2026-11-18 17:39:26,809 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 156' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=reginarodriguez&password=808lB30_J%24NKA%25Ri_jakZLa%2ARxvQ%26Q&password_repeat=808lB30_J%24NKA%25Ri_jakZLa%2ARxvQ%26Q&email=curtis52%40example.com' http://localhost:8000/auth/register/
+[2026-11-18 17:39:26,809 - INFO] - Response status code='201', elapsed_time='0:00:00.206982'
+{
+  "detail": "User registered"
+}
+
+[2026-11-18 17:39:27,082 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 72' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=reginarodriguez&password=808lB30_J%24NKA%25Ri_jakZLa%2ARxvQ%26Q' http://localhost:8000/auth/login/
+[2026-11-18 17:39:27,082 - INFO] - Response status code='200', elapsed_time='0:00:00.232053'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoicmVnaW5hcm9kcmlndWV6IiwiZXhwIjoxNzk1MDMwNzY3LCJpYXQiOjE3OTUwMjM1Njd9.j8G1BYLEQxEdaEaMIugIo28JRAlmn8jisJjI057n1k6vQteoj8XUIj6_UCgQpz9g9EpBubU7-uUVjzILWFlZW2blEnMACq7vLaxaom3Rzs4w4XjalWv6mZrA8ZHFk26SWyovin5QKXwKWtFWMMCgYGPBMP-xc6s50YjVONPnKQY35vkIiBcN7bZUfvs2uvd_R1UIb3gcw-xbS0GTBncc4-A19RsAQSug7Vav4j7v_E_uHTD2eAx4d1UQpp39qs14kGpEXEIctKQjeMEql0tfMqMN_x47p3UtKFXtS9tCGi2xIarQeP8en1aFVH6M_gNXxlQrVduZ0eQc5HCE0kZDPw",
+  "token_type": "Bearer"
+}
+
+[2026-11-18 17:39:27,093 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoicmVnaW5hcm9kcmlndWV6IiwiZXhwIjoxNzk1MDMwNzY3LCJpYXQiOjE3OTUwMjM1Njd9.j8G1BYLEQxEdaEaMIugIo28JRAlmn8jisJjI057n1k6vQteoj8XUIj6_UCgQpz9g9EpBubU7-uUVjzILWFlZW2blEnMACq7vLaxaom3Rzs4w4XjalWv6mZrA8ZHFk26SWyovin5QKXwKWtFWMMCgYGPBMP-xc6s50YjVONPnKQY35vkIiBcN7bZUfvs2uvd_R1UIb3gcw-xbS0GTBncc4-A19RsAQSug7Vav4j7v_E_uHTD2eAx4d1UQpp39qs14kGpEXEIctKQjeMEql0tfMqMN_x47p3UtKFXtS9tCGi2xIarQeP8en1aFVH6M_gNXxlQrVduZ0eQc5HCE0kZDPw' -H 'Content-Length: 22' -H 'Content-Type: application/json' -d '{"name": "Cindy Wade"}' http://localhost:8001/groups/
+[2026-11-18 17:39:27,093 - INFO] - Response status code='201', elapsed_time='0:00:00.009479'
+{
+  "name": "Cindy Wade",
+  "id": 1
+}
+

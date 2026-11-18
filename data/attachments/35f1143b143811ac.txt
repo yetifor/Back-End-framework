@@ -1,0 +1,31 @@
+Таблица успешно  очищена!
+[2026-11-18 17:39:27,875 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 156' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=imcconnell&password=YX938%403Y2_JR3br%294EZR1R%25fAdo%26bO&password_repeat=YX938%403Y2_JR3br%294EZR1R%25fAdo%26bO&email=hoopermicheal%40example.com' http://localhost:8000/auth/register/
+[2026-11-18 17:39:27,876 - INFO] - Response status code='201', elapsed_time='0:00:00.217693'
+{
+  "detail": "User registered"
+}
+
+[2026-11-18 17:39:28,146 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 67' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=imcconnell&password=YX938%403Y2_JR3br%294EZR1R%25fAdo%26bO' http://localhost:8000/auth/login/
+[2026-11-18 17:39:28,146 - INFO] - Response status code='200', elapsed_time='0:00:00.229323'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjYsInVzZXJuYW1lIjoiaW1jY29ubmVsbCIsImV4cCI6MTc5NTAzMDc2OCwiaWF0IjoxNzk1MDIzNTY4fQ.TPZ5rLcc5C1LV6fNFeyxfDNpto47K4ezO0qG6Flo_yMSyhCjDREcTSUo1gm7Whaqea_cEmVWcjRCgxQLzkctoHVhEdTtyDFM6XFO9c2e5uBGRU370uB0Bht6PYQrwedgbSgcgeH-5B3aF5n82C42u_o3K9KJDSmlF5MaO0jc_7-nSONSjvSJSjUZhs2WUyr0cBOr9mTmcduaMoj4muP_DUdcXigAASMJabVHRwxuVWKk-5S7yHq3uzM1M8eRDJuxnGD6DwEbuN4fmMqjEYN3mzJVG-uMyGrmbF4M5zVrSmQqFIZb1Twe6wjHK5DxvCysIItQ7lk6VD-Tx8q2M7hnvA",
+  "token_type": "Bearer"
+}
+
+[2026-11-18 17:39:28,147 - INFO] - ### Step 1. Create group
+[2026-11-18 17:39:28,155 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjYsInVzZXJuYW1lIjoiaW1jY29ubmVsbCIsImV4cCI6MTc5NTAzMDc2OCwiaWF0IjoxNzk1MDIzNTY4fQ.TPZ5rLcc5C1LV6fNFeyxfDNpto47K4ezO0qG6Flo_yMSyhCjDREcTSUo1gm7Whaqea_cEmVWcjRCgxQLzkctoHVhEdTtyDFM6XFO9c2e5uBGRU370uB0Bht6PYQrwedgbSgcgeH-5B3aF5n82C42u_o3K9KJDSmlF5MaO0jc_7-nSONSjvSJSjUZhs2WUyr0cBOr9mTmcduaMoj4muP_DUdcXigAASMJabVHRwxuVWKk-5S7yHq3uzM1M8eRDJuxnGD6DwEbuN4fmMqjEYN3mzJVG-uMyGrmbF4M5zVrSmQqFIZb1Twe6wjHK5DxvCysIItQ7lk6VD-Tx8q2M7hnvA' -H 'Content-Length: 14' -H 'Content-Type: application/json' -d '{"name": null}' http://localhost:8001/groups/
+[2026-11-18 17:39:28,155 - INFO] - Response status code='422', elapsed_time='0:00:00.007089'
+{
+  "detail": [
+    {
+      "type": "string_type",
+      "loc": [
+        "body",
+        "name"
+      ],
+      "msg": "Input should be a valid string",
+      "input": null
+    }
+  ]
+}
+
