@@ -1,0 +1,23 @@
+[2026-11-18 11:21:56,689 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 155' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=johnsonmax&password=8GTuV%23W4%28O%28JJOf49di%2A7ycLUeSDgd&password_repeat=8GTuV%23W4%28O%28JJOf49di%2A7ycLUeSDgd&email=timothyellis%40example.net' http://localhost:8000/auth/register/
+[2026-11-18 11:21:56,689 - INFO] - Response status code='201', elapsed_time='0:00:00.272199'
+{
+  "detail": "User registered"
+}
+
+[2026-11-18 11:21:57,042 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 67' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=johnsonmax&password=8GTuV%23W4%28O%28JJOf49di%2A7ycLUeSDgd' http://localhost:8000/auth/login/
+[2026-11-18 11:21:57,042 - INFO] - Response status code='200', elapsed_time='0:00:00.312434'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE1LCJ1c2VybmFtZSI6ImpvaG5zb25tYXgiLCJleHAiOjE3OTUwMDgxMTYsImlhdCI6MTc5NTAwMDkxNn0.S1-q-skbkM-lJH9MVU7TUR4XE1WBJu-M9-TtuiPQi-1fPh2-XJPhNPOXLzLANvlbwaxbcbHS3kCpDj4GSHXyFBjJdIhM7TKmKwBBQltzfN9YA70vrCPzNSoQVsoivzD4ThRNr-N-SSgoNzuHl5grfEQX6FKuaZN5Owu_k395nKYggs_5Rjchwq0IQisjbiFV-Frm97lSb6MWnw6U-4YW2OwImGsVncrn4M6KDpFY5ezLV7igPVFyFi3sAslBsOoa55zsBtolARSHdjDfYXZijzSwht1sIodQS8fQ8O8QvkXT50TkZyjq9FVqlkxZm143i7Sch_MOADwetM_ve1_p8g",
+  "token_type": "Bearer"
+}
+
+[2026-11-18 11:21:57,043 - INFO] - ### Step 1. Create teacher
+[2026-11-18 11:21:57,053 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE1LCJ1c2VybmFtZSI6ImpvaG5zb25tYXgiLCJleHAiOjE3OTUwMDgxMTYsImlhdCI6MTc5NTAwMDkxNn0.S1-q-skbkM-lJH9MVU7TUR4XE1WBJu-M9-TtuiPQi-1fPh2-XJPhNPOXLzLANvlbwaxbcbHS3kCpDj4GSHXyFBjJdIhM7TKmKwBBQltzfN9YA70vrCPzNSoQVsoivzD4ThRNr-N-SSgoNzuHl5grfEQX6FKuaZN5Owu_k395nKYggs_5Rjchwq0IQisjbiFV-Frm97lSb6MWnw6U-4YW2OwImGsVncrn4M6KDpFY5ezLV7igPVFyFi3sAslBsOoa55zsBtolARSHdjDfYXZijzSwht1sIodQS8fQ8O8QvkXT50TkZyjq9FVqlkxZm143i7Sch_MOADwetM_ve1_p8g' -H 'Content-Length: 74' -H 'Content-Type: application/json' -d '{"first_name": "Reginald", "last_name": "Burnett", "subject": "Geography"}' http://localhost:8001/teachers/
+[2026-11-18 11:21:57,053 - INFO] - Response status code='201', elapsed_time='0:00:00.009645'
+{
+  "first_name": "Reginald",
+  "last_name": "Burnett",
+  "subject": "Geography",
+  "id": 6
+}
+
