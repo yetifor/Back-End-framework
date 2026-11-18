@@ -1,5 +1,6 @@
 from faker import Faker
 
+from services.university.university_helpers.group_helper import GroupHelper
 from services.university.university_helpers.student_helper import StudentHelper
 from services.university.university_models.base_student import DegreeEnum
 
@@ -14,6 +15,8 @@ class TestStudentContract:
     def test_create_student(self, university_api_utils_admin):
         Logger.info("### Step 1: Create student")
         student_helper = StudentHelper(university_api_utils_admin)
+        group_helper = GroupHelper(university_api_utils_admin)
+        group_helper.post_group({"name":faker.word()})
         student = student_helper.post_student({"first_name": faker.first_name(),
                                                "last_name": faker.last_name(),
                                                "email": faker.email(),
