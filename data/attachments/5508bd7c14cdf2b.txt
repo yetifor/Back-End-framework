@@ -1,0 +1,30 @@
+[2026-11-18 11:24:18,269 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 171' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=serranostacey&password=j%21%25E4a%40DO%26mw99ea%2AssT%5EQKa%25h8NVa&password_repeat=j%21%25E4a%40DO%26mw99ea%2AssT%5EQKa%25h8NVa&email=alexanderryan%40example.com' http://localhost:8000/auth/register/
+[2026-11-18 11:24:18,269 - INFO] - Response status code='201', elapsed_time='0:00:00.277410'
+{
+  "detail": "User registered"
+}
+
+[2026-11-18 11:24:18,628 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 76' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=serranostacey&password=j%21%25E4a%40DO%26mw99ea%2AssT%5EQKa%25h8NVa' http://localhost:8000/auth/login/
+[2026-11-18 11:24:18,628 - INFO] - Response status code='200', elapsed_time='0:00:00.317276'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjcsInVzZXJuYW1lIjoic2VycmFub3N0YWNleSIsImV4cCI6MTc5NTAwODI1OCwiaWF0IjoxNzk1MDAxMDU4fQ.Wzm9v5xKIkivRTJPkntl-DHDpLa4gGJsU44lH8nszMsVFxOzzWksw7q7jHag9EVO1z-aIAJigfB43g9K4VMvw8s1jB9ox77LSs8v4QycvZoTOa0aGSlKDCb40N8SV66L_9DlTt-oeThEbHaKkkO6nQbffo94g4j7_r0jA6346D3xtp_cw3tnKoc0Gt78relgsA3UNkB6RgRer1MN5cRYCchsIiPRQXYrs4xLKbQwedLYWCY7Jh5am6z6cWQIyPjZhLUMoYjcsanE3MUIU5BXIp7wEHMaYo6gd0MdygOjR3ztJ7T8ueJrGg5sm_x9eftezLOkqYHJ_kqcibYAyZz9_Q",
+  "token_type": "Bearer"
+}
+
+[2026-11-18 11:24:18,629 - INFO] - ### Step 1. Create Student
+[2026-11-18 11:24:18,638 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjcsInVzZXJuYW1lIjoic2VycmFub3N0YWNleSIsImV4cCI6MTc5NTAwODI1OCwiaWF0IjoxNzk1MDAxMDU4fQ.Wzm9v5xKIkivRTJPkntl-DHDpLa4gGJsU44lH8nszMsVFxOzzWksw7q7jHag9EVO1z-aIAJigfB43g9K4VMvw8s1jB9ox77LSs8v4QycvZoTOa0aGSlKDCb40N8SV66L_9DlTt-oeThEbHaKkkO6nQbffo94g4j7_r0jA6346D3xtp_cw3tnKoc0Gt78relgsA3UNkB6RgRer1MN5cRYCchsIiPRQXYrs4xLKbQwedLYWCY7Jh5am6z6cWQIyPjZhLUMoYjcsanE3MUIU5BXIp7wEHMaYo6gd0MdygOjR3ztJ7T8ueJrGg5sm_x9eftezLOkqYHJ_kqcibYAyZz9_Q' -H 'Content-Length: 158' -H 'Content-Type: application/json' -d '{"first_name": "Alex", "last_name": "Fisher", "email": "janice78@example.net", "degree": "Doctorate", "phone": "+75809143250", "group_id": "invalid_group_id"}' http://localhost:8001/students/
+[2026-11-18 11:24:18,638 - INFO] - Response status code='422', elapsed_time='0:00:00.008125'
+{
+  "detail": [
+    {
+      "type": "int_parsing",
+      "loc": [
+        "body",
+        "group_id"
+      ],
+      "msg": "Input should be a valid integer, unable to parse string as an integer",
+      "input": "invalid_group_id"
+    }
+  ]
+}
+

@@ -1,0 +1,22 @@
+[2026-11-18 11:24:21,144 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 151' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=garciamark&password=Zi5m%2AZA_eqYFf%24d9qT%2Af0eoyQy0ql1&password_repeat=Zi5m%2AZA_eqYFf%24d9qT%2Af0eoyQy0ql1&email=haroldbutler%40example.org' http://localhost:8000/auth/register/
+[2026-11-18 11:24:21,144 - INFO] - Response status code='201', elapsed_time='0:00:00.273222'
+{
+  "detail": "User registered"
+}
+
+[2026-11-18 11:24:21,498 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 65' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=garciamark&password=Zi5m%2AZA_eqYFf%24d9qT%2Af0eoyQy0ql1' http://localhost:8000/auth/login/
+[2026-11-18 11:24:21,498 - INFO] - Response status code='200', elapsed_time='0:00:00.313282'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6ImdhcmNpYW1hcmsiLCJleHAiOjE3OTUwMDgyNjEsImlhdCI6MTc5NTAwMTA2MX0.DOyv6l7ZlYeWpNJuFXlwu9wn0WmF5WOGtUgNNIJaJ9mVt4yOAGPWMpmchqP6vwndvhR0U-JOzXE7EU3eBhwjbtlbAWoAsoJaQ2prq1FLzR6rpkgay5MUC77Sx3qvdnEiG2bmubONBun-PpbzXNHXW-WeuuO6AEhU-up6_bwb3YHhXszECXBlBXVqAyXA7Vu5gaOFg5H6NrrOpa0sS0l392vL9GKZaAmyn3Bw3oSKpD05f6lrWFNaUwueOcL4Zk35tnHCbF7AkRMyvUBR_-FB4UhUJUOCmG4O18d_uk8QPz4bPYl4yTQPLVuh4XTgKKSMZO0PUcldDQ-HplENEYMCJQ",
+  "token_type": "Bearer"
+}
+
+[2026-11-18 11:24:21,508 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6ImdhcmNpYW1hcmsiLCJleHAiOjE3OTUwMDgyNjEsImlhdCI6MTc5NTAwMTA2MX0.DOyv6l7ZlYeWpNJuFXlwu9wn0WmF5WOGtUgNNIJaJ9mVt4yOAGPWMpmchqP6vwndvhR0U-JOzXE7EU3eBhwjbtlbAWoAsoJaQ2prq1FLzR6rpkgay5MUC77Sx3qvdnEiG2bmubONBun-PpbzXNHXW-WeuuO6AEhU-up6_bwb3YHhXszECXBlBXVqAyXA7Vu5gaOFg5H6NrrOpa0sS0l392vL9GKZaAmyn3Bw3oSKpD05f6lrWFNaUwueOcL4Zk35tnHCbF7AkRMyvUBR_-FB4UhUJUOCmG4O18d_uk8QPz4bPYl4yTQPLVuh4XTgKKSMZO0PUcldDQ-HplENEYMCJQ' 'http://localhost:8001/grades/stats/?student_id=93824150'
+[2026-11-18 11:24:21,509 - INFO] - Response status code='200', elapsed_time='0:00:00.009121'
+{
+  "count": 0,
+  "min": null,
+  "max": null,
+  "avg": null
+}
+
