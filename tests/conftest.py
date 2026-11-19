@@ -118,7 +118,7 @@ def delete_database():
         cursor.execute("TRUNCATE TABLE teachers, groups, students, grades RESTART IDENTITY CASCADE;")
 
         conn.commit()
-        Logger.info(f'Database deleted successfully')
+        Logger.info('Database deleted successfully')
 
     except Exception as error:  # noqa: BLE001
         Logger.info(f'Database deleted failed: {error}')
