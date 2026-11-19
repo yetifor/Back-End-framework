@@ -1,8 +1,0 @@
-Таблица успешно  очищена!
-[2026-11-18 17:40:01,696 - INFO] - ### Step 1. Create teacher
-[2026-11-18 17:40:01,699 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 76' -H 'Content-Type: application/json' -d '{"first_name": "Nicholas", "last_name": "Rodriguez", "subject": "Geography"}' http://localhost:8001/teachers/
-[2026-11-18 17:40:01,699 - INFO] - Response status code='403', elapsed_time='0:00:00.001838'
-{
-  "detail": "Access denied"
-}
-

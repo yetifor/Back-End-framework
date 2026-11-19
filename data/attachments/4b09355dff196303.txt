@@ -1,0 +1,21 @@
+INFO     Logger:logger.py:29 Database deleted successfully
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 157' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=charlene69&password=sse%5E%23ac_nXlCwacNS%5E4pvAbiVggoM%2A&password_repeat=sse%5E%23ac_nXlCwacNS%5E4pvAbiVggoM%2A&email=justinwilliams%40example.com' http://localhost:8000/auth/register/
+INFO     Logger:logger.py:29 Response status code='201', elapsed_time='0:00:00.239804'
+{
+  "detail": "User registered"
+}
+
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 67' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=charlene69&password=sse%5E%23ac_nXlCwacNS%5E4pvAbiVggoM%2A' http://localhost:8000/auth/login/
+INFO     Logger:logger.py:29 Response status code='200', elapsed_time='0:00:00.274204'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwLCJ1c2VybmFtZSI6ImNoYXJsZW5lNjkiLCJleHAiOjE3OTUwODM3NzcsImlhdCI6MTc5NTA3NjU3N30.VQ8ldvly7aAtLZ9MrSkRzxzH4pDkSt-2QnQ9sTj6dR-RTpefF5I4-L56dciuXly4_FRgQuOMxJRFi_hrTi_pPu0H1B9K_DswrgabNsrdnUDHjIzGlDhaHhzL0zeuuHHca9tdGZzPtjnxMQt9fHgMsFkD47VbbD6mv4b6nplOUp_zLXtDEcjPmIls6H1lhfKp3Dv-9Nez8eC1Z0VmbDrWcyBe4ebuRpZvcRS0mrZP10YWbf_URPXP0BwdqyLyx93pp8257ZadFCUmmfkyiLa_R57XBlGM8BeQxbqKZNn7jWD9E_rWt4wRt-IeU7AaSqsePnWQhLCK7_M01_hOwk1S0w",
+  "token_type": "Bearer"
+}
+INFO     Logger:logger.py:29 Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwLCJ1c2VybmFtZSI6ImNoYXJsZW5lNjkiLCJleHAiOjE3OTUwODM3NzcsImlhdCI6MTc5NTA3NjU3N30.VQ8ldvly7aAtLZ9MrSkRzxzH4pDkSt-2QnQ9sTj6dR-RTpefF5I4-L56dciuXly4_FRgQuOMxJRFi_hrTi_pPu0H1B9K_DswrgabNsrdnUDHjIzGlDhaHhzL0zeuuHHca9tdGZzPtjnxMQt9fHgMsFkD47VbbD6mv4b6nplOUp_zLXtDEcjPmIls6H1lhfKp3Dv-9Nez8eC1Z0VmbDrWcyBe4ebuRpZvcRS0mrZP10YWbf_URPXP0BwdqyLyx93pp8257ZadFCUmmfkyiLa_R57XBlGM8BeQxbqKZNn7jWD9E_rWt4wRt-IeU7AaSqsePnWQhLCK7_M01_hOwk1S0w' 'http://localhost:8001/grades/stats/?teacher_id=86282823'
+INFO     Logger:logger.py:29 Response status code='200', elapsed_time='0:00:00.008469'
+{
+  "count": 0,
+  "min": null,
+  "max": null,
+  "avg": null
+}
