@@ -1,8 +1,0 @@
-[2026-11-19 08:23:29,372 - INFO] - Database deleted successfully
-[2026-11-19 08:23:29,373 - INFO] - ### Step 1. Create teacher
-[2026-11-19 08:23:29,375 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 68' -H 'Content-Type: application/json' -d '{"first_name": "Deanna", "last_name": "Crane", "subject": "Physics"}' http://localhost:8001/teachers/
-[2026-11-19 08:23:29,376 - INFO] - Response status code='403', elapsed_time='0:00:00.001708'
-{
-  "detail": "Access denied"
-}
-

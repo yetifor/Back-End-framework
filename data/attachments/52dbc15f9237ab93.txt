@@ -1,0 +1,23 @@
+[2026-11-21 15:39:30,171 - INFO] - Database deleted successfully
+[2026-11-21 15:39:30,420 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 146' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=grojas&password=wr%5EiyKVZqXF%21BcLqEB%215IEizT%231kUT&password_repeat=wr%5EiyKVZqXF%21BcLqEB%215IEizT%231kUT&email=roger24%40example.org' http://localhost:8000/auth/register/
+[2026-11-21 15:39:30,420 - INFO] - Response status code='201', elapsed_time='0:00:00.247373'
+{
+  "detail": "User registered"
+}
+
+[2026-11-21 15:39:30,743 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 63' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=grojas&password=wr%5EiyKVZqXF%21BcLqEB%215IEizT%231kUT' http://localhost:8000/auth/login/
+[2026-11-21 15:39:30,743 - INFO] - Response status code='200', elapsed_time='0:00:00.282016'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwLCJ1c2VybmFtZSI6Imdyb2phcyIsImV4cCI6MTc5NTI4Mjc3MCwiaWF0IjoxNzk1Mjc1NTcwfQ.CfnU3X20MjR7Wg5xYI9UBuVwJ11-vn_QTBJQh9pSMwU4g-ioPy9IqA9E2N_-_GeEG7_MxBRLfU99VEkwOIE9TAf7z3fwEnIwTGOO5DH30NnO05B16xe4KZKsXxgxS39bI247ZeSKqFSAzfABdkDwkmCw9hQ7t6lYBfBu_iHcRT3BRgrGNXiEhSWN_-H9dIaFi9kgCdNPkIZ6JnZb50wILsOwD-SPJSGwnjyQJO1b_wn2iZFRPgpESSvZEMrCNOd-Aw00chh_ozPyPa_zJ5_89Zeg-HzQsULWWqK2ys2Yxabg-2ndom93mxs-mKEyPtxpQBu6wqv_NIyqeFf2mDW-Fw",
+  "token_type": "Bearer"
+}
+
+[2026-11-21 15:39:30,753 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwLCJ1c2VybmFtZSI6Imdyb2phcyIsImV4cCI6MTc5NTI4Mjc3MCwiaWF0IjoxNzk1Mjc1NTcwfQ.CfnU3X20MjR7Wg5xYI9UBuVwJ11-vn_QTBJQh9pSMwU4g-ioPy9IqA9E2N_-_GeEG7_MxBRLfU99VEkwOIE9TAf7z3fwEnIwTGOO5DH30NnO05B16xe4KZKsXxgxS39bI247ZeSKqFSAzfABdkDwkmCw9hQ7t6lYBfBu_iHcRT3BRgrGNXiEhSWN_-H9dIaFi9kgCdNPkIZ6JnZb50wILsOwD-SPJSGwnjyQJO1b_wn2iZFRPgpESSvZEMrCNOd-Aw00chh_ozPyPa_zJ5_89Zeg-HzQsULWWqK2ys2Yxabg-2ndom93mxs-mKEyPtxpQBu6wqv_NIyqeFf2mDW-Fw' 'http://localhost:8001/grades/stats/?teacher_id=73187282'
+[2026-11-21 15:39:30,753 - INFO] - Response status code='200', elapsed_time='0:00:00.008765'
+{
+  "count": 0,
+  "min": null,
+  "max": null,
+  "avg": null
+}
+

@@ -1,0 +1,23 @@
+[2026-11-21 15:39:30,765 - INFO] - Database deleted successfully
+[2026-11-21 15:39:31,008 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 154' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=karen04&password=HO%23pX%21cgu%2ACthaYbRM%29s%21sPdc7404y&password_repeat=HO%23pX%21cgu%2ACthaYbRM%29s%21sPdc7404y&email=clarence21%40example.com' http://localhost:8000/auth/register/
+[2026-11-21 15:39:31,008 - INFO] - Response status code='201', elapsed_time='0:00:00.241138'
+{
+  "detail": "User registered"
+}
+
+[2026-11-21 15:39:31,329 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 66' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=karen04&password=HO%23pX%21cgu%2ACthaYbRM%29s%21sPdc7404y' http://localhost:8000/auth/login/
+[2026-11-21 15:39:31,329 - INFO] - Response status code='200', elapsed_time='0:00:00.279446'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6ImthcmVuMDQiLCJleHAiOjE3OTUyODI3NzEsImlhdCI6MTc5NTI3NTU3MX0.HX5gR_5bCeydfU9XPslV5z813fe9MTO6YecMxofKIvDUXHYEk_09e8RaSZ2phtqselnd_gnNF1eT8ryIDW_MKcR68-0q2Yd7I9STrInA768dCR13yKDbXQcZ6lHpAgOXzcoa3h_G1qRp8hwrVDkLocOM4W3gEiufHR7y94Aer-qfjo332B9C1M11lCdMeTTxjOB49jw2lPCUcNMz8RSGe5Ti9YnURfRVKlYGgVwbsFZ1kZg03NLLIVARKA8XueFXjKINrEr7H_c8U9ZuK7TRk8Mu0loO8H2qKO9Wyh_HIzARWFN8aaFDdVPwLoMDQMxMYNvyIqoG4sRz9HwsahTmkw",
+  "token_type": "Bearer"
+}
+
+[2026-11-21 15:39:31,341 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6ImthcmVuMDQiLCJleHAiOjE3OTUyODI3NzEsImlhdCI6MTc5NTI3NTU3MX0.HX5gR_5bCeydfU9XPslV5z813fe9MTO6YecMxofKIvDUXHYEk_09e8RaSZ2phtqselnd_gnNF1eT8ryIDW_MKcR68-0q2Yd7I9STrInA768dCR13yKDbXQcZ6lHpAgOXzcoa3h_G1qRp8hwrVDkLocOM4W3gEiufHR7y94Aer-qfjo332B9C1M11lCdMeTTxjOB49jw2lPCUcNMz8RSGe5Ti9YnURfRVKlYGgVwbsFZ1kZg03NLLIVARKA8XueFXjKINrEr7H_c8U9ZuK7TRk8Mu0loO8H2qKO9Wyh_HIzARWFN8aaFDdVPwLoMDQMxMYNvyIqoG4sRz9HwsahTmkw' 'http://localhost:8001/grades/stats/?student_id=29815886'
+[2026-11-21 15:39:31,341 - INFO] - Response status code='200', elapsed_time='0:00:00.011159'
+{
+  "count": 0,
+  "min": null,
+  "max": null,
+  "avg": null
+}
+

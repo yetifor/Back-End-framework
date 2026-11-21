@@ -1,0 +1,21 @@
+[2026-11-21 15:39:26,213 - INFO] - Database deleted successfully
+[2026-11-21 15:39:26,461 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 172' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=adrian47&password=nti6%23%21jAc%40%2BcT%29Inr%28OFA%2AWn%21z%29PT5&password_repeat=nti6%23%21jAc%40%2BcT%29Inr%28OFA%2AWn%21z%29PT5&email=jessenguyen%40example.com' http://localhost:8000/auth/register/
+[2026-11-21 15:39:26,461 - INFO] - Response status code='201', elapsed_time='0:00:00.246189'
+{
+  "detail": "User registered"
+}
+
+[2026-11-21 15:39:26,776 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 75' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=adrian47&password=nti6%23%21jAc%40%2BcT%29Inr%28OFA%2AWn%21z%29PT5' http://localhost:8000/auth/login/
+[2026-11-21 15:39:26,776 - INFO] - Response status code='200', elapsed_time='0:00:00.273694'
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiYWRyaWFuNDciLCJleHAiOjE3OTUyODI3NjYsImlhdCI6MTc5NTI3NTU2Nn0.BX5UvGvCZH6iLDJPaj51v4kIeIA9bijsBS981NZIRFKhUYEcX_mc_o_kNAGXkn2c6H1jhUiv6HSScfxtdnLoeTKog69-cUNcs5UAYuuz4O_qsWdWAbblFgt6rTAub3inkMnLPgaS0opZyv8F8jqWvnDxlBCW8S76M1LvX7ri3raUrDNK5L0bBirzQPb_XO0eyli3iw28zXXlB919PhbPWV2EXvZcvB8lSvb86aOdwe0shar35IxKp636VrruLh1jkQBvcM3tSdXX7ue0zfXuhzdFFrtHqOmnLF1oAsW8cS4H5XYsKmoidOZew2CxpXLC1KJlYkAKBwJ3koojdYTJlw",
+  "token_type": "Bearer"
+}
+
+[2026-11-21 15:39:26,793 - INFO] - Request:curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiYWRyaWFuNDciLCJleHAiOjE3OTUyODI3NjYsImlhdCI6MTc5NTI3NTU2Nn0.BX5UvGvCZH6iLDJPaj51v4kIeIA9bijsBS981NZIRFKhUYEcX_mc_o_kNAGXkn2c6H1jhUiv6HSScfxtdnLoeTKog69-cUNcs5UAYuuz4O_qsWdWAbblFgt6rTAub3inkMnLPgaS0opZyv8F8jqWvnDxlBCW8S76M1LvX7ri3raUrDNK5L0bBirzQPb_XO0eyli3iw28zXXlB919PhbPWV2EXvZcvB8lSvb86aOdwe0shar35IxKp636VrruLh1jkQBvcM3tSdXX7ue0zfXuhzdFFrtHqOmnLF1oAsW8cS4H5XYsKmoidOZew2CxpXLC1KJlYkAKBwJ3koojdYTJlw' -H 'Content-Length: 24' -H 'Content-Type: application/json' -d '{"name": "Steven Brown"}' http://localhost:8001/groups/
+[2026-11-21 15:39:26,793 - INFO] - Response status code='201', elapsed_time='0:00:00.015254'
+{
+  "name": "Steven Brown",
+  "id": 1
+}
+
