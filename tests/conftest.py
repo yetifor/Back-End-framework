@@ -146,3 +146,7 @@ def wait_for_services():
                 break
         else:
             raise TimeoutError(f'Services not available after {timeot} seconds')
+
+@pytest.fixture(scope='session', autouse=False)
+def next_test_CI():
+    pass
